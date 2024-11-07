@@ -41,9 +41,10 @@ class _pagetState extends State<page> {
       backgroundColor: primaryColor,
       body: _page[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: primaryColor,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: second,
-        unselectedItemColor: Color(0xff6C6C6C),
+        unselectedItemColor: Color(0xffD9D9D9),
         currentIndex: _currentIndex,
         onTap: _onTapTapp,
         items: [
