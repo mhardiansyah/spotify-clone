@@ -11,11 +11,14 @@ class ModelRekomend extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 189,
+      height: 60,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Colors.green,
+        color: rekomend,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisSize: MainAxisSize.min,

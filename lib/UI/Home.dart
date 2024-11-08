@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:spotify/Model/Model_rekomend.dart';
 import 'package:spotify/Themes/colors.dart';
 
 class Home extends StatefulWidget {
@@ -44,29 +45,39 @@ class _HomeState extends State<Home> {
     return Column(
       children: [
         Container(
+          
           child: GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 9,
             mainAxisSpacing: 9,
             shrinkWrap: true,
+            childAspectRatio: 3 / 1,
             physics: NeverScrollableScrollPhysics(),
             children: [
-              // ModelRekomend(
-              //   imageRekomend: 'assets/rekomend-1.png',
-              //   namaRekomend: 'Liked Songs',
-              // ),
-              // ModelRekomend(
-              //   imageRekomend: 'assets/rekomend-1.png',
-              //   namaRekomend: 'Liked Songs',
-              // ),
-              // ModelRekomend(
-              //   imageRekomend: 'assets/rekomend-1.png',
-              //   namaRekomend: 'Liked Songs',
-              // ),
-              // ModelRekomend(
-              //   imageRekomend: 'assets/rekomend-1.png',
-              //   namaRekomend: 'Liked Songs',
-              // ),
+              ModelRekomend(
+                imageRekomend: 'assets/rekomend1.png',
+                namaRekomend: 'Liked Songs',
+              ),
+              ModelRekomend(
+                imageRekomend: 'assets/rekomend1.png',
+                namaRekomend: 'Liked Songs',
+              ),
+              ModelRekomend(
+                imageRekomend: 'assets/rekomend1.png',
+                namaRekomend: 'Liked Songs',
+              ),
+              ModelRekomend(
+                imageRekomend: 'assets/rekomend1.png',
+                namaRekomend: 'Liked Songs',
+              ),
+              ModelRekomend(
+                imageRekomend: 'assets/rekomend1.png',
+                namaRekomend: 'Liked Songs',
+              ),
+              ModelRekomend(
+                imageRekomend: 'assets/rekomend1.png',
+                namaRekomend: 'Liked Songs',
+              ),
             ],
           ),
         )
