@@ -43,10 +43,20 @@ class _onboardState extends State<onboard> {
                   borderRadius: BorderRadius.circular(35),
                   color: second,
                 ),
-                child: Center(
-                  child: Text(
-                    'Sign up free',
-                    style: btnlogin,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Login(),
+                      ),
+                    );
+                  },
+                  child: Center(
+                    child: Text(
+                      'Sign up free',
+                      style: btnlogin,
+                    ),
                   ),
                 ),
               ),
