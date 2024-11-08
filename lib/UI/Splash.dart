@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:spotify/Themes/colors.dart';
 import 'package:spotify/UI/Home.dart';
-import 'package:spotify/UI/Login_Register.dart';
+import 'package:spotify/UI/auth/onboard.dart';
 import 'package:spotify/UI/page.dart';
 
 class Splash extends StatefulWidget {
@@ -22,7 +22,7 @@ class _SplashState extends State<Splash> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => page(),
+            builder: (context) => onboard(),
           ));
     });
   }
