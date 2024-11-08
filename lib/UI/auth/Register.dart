@@ -3,8 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/Themes/colors.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

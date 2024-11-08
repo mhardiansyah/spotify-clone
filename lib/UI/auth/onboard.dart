@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/Themes/colors.dart';
 import 'package:spotify/UI/auth/Login.dart';
+import 'package:spotify/UI/auth/Register.dart';
 
 class onboard extends StatefulWidget {
   const onboard({super.key});
@@ -48,7 +49,7 @@ class _onboardState extends State<onboard> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => Login(),
+                        builder: (context) => Register(),
                       ),
                     );
                   },
