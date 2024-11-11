@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:spotify/Model/Model_rekomend.dart';
 import 'package:spotify/Themes/colors.dart';
@@ -45,7 +46,7 @@ class _HomeState extends State<Home> {
     return Column(
       children: [
         Container(
-          
+          margin: EdgeInsets.only(bottom: 40),
           child: GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 9,
@@ -59,27 +60,130 @@ class _HomeState extends State<Home> {
                 namaRekomend: 'Liked Songs',
               ),
               ModelRekomend(
-                imageRekomend: 'assets/rekomend1.png',
-                namaRekomend: 'Liked Songs',
+                imageRekomend: 'assets/rekomend2.png',
+                namaRekomend: 'Emotional Songs',
               ),
               ModelRekomend(
-                imageRekomend: 'assets/rekomend1.png',
-                namaRekomend: 'Liked Songs',
+                imageRekomend: 'assets/rekomend3.png',
+                namaRekomend: 'Origins/Deluxe',
               ),
               ModelRekomend(
-                imageRekomend: 'assets/rekomend1.png',
-                namaRekomend: 'Liked Songs',
+                imageRekomend: 'assets/rekomend4.png',
+                namaRekomend: 'Augustten Ft Jhesy',
               ),
               ModelRekomend(
-                imageRekomend: 'assets/rekomend1.png',
-                namaRekomend: 'Liked Songs',
+                imageRekomend: 'assets/rekomend5.png',
+                namaRekomend: 'A Place We Knew',
               ),
               ModelRekomend(
-                imageRekomend: 'assets/rekomend1.png',
-                namaRekomend: 'Liked Songs',
+                imageRekomend: 'assets/rekomend6.png',
+                namaRekomend: '1000 Forms Of Fear',
               ),
             ],
           ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              radius: 42,
+              backgroundImage: AssetImage('assets/avatar1.png'),
+            ),
+            SizedBox(
+              width: 12,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'NEW RELEASE FROM',
+                  style: GoogleFonts.poppins(fontSize: 9, color: white),
+                ),
+                SizedBox(
+                  height: 7,
+                ),
+                Text(
+                  'Dean Lewis',
+                  style: judul,
+                )
+              ],
+            )
+          ],
+        ),
+        SizedBox(
+          height: 18,
+        ),
+        Container(
+          margin: EdgeInsets.only(bottom: 45),
+          width: 380,
+          height: 154,
+          decoration: BoxDecoration(
+            color: rekomend,
+            borderRadius: BorderRadiusDirectional.circular(10),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(
+                'assets/lagu1.png',
+                fit: BoxFit.cover,
+              ),
+              SizedBox(
+                width: 18,
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 17, right: 16, bottom: 24),
+                child: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Hurtless (Acoustic)',
+                          style: numlagu,
+                        ),
+                        Text(
+                          'Single    Dean Lewis',
+                          style:
+                              GoogleFonts.inter(fontSize: 11, color: whiteabu),
+                        ),
+                        Spacer(),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.favorite_border_outlined,
+                              size: 24,
+                              color: white,
+                            ),
+                            SizedBox(
+                              width: 138,
+                            ),
+                            CircleAvatar(
+                              radius: 15,
+                              child: Icon(
+                                Icons.play_arrow,
+                                size: 23,
+                                color: Colors.black,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              'Discover something new',
+              style: judul,
+            ),
+          ],
         )
       ],
     );

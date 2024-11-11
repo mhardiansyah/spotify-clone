@@ -6,6 +6,7 @@ Color primaryColor = Color(0xFF121212);
 Color second = Color(0xFF1ED760);
 
 Color white = Color(0xFFFFFFFF);
+Color whiteabu = Color(0x98FFFFFF);
 
 Color rekomend = Color(0x73444444);
 
@@ -31,7 +32,8 @@ TextStyle mainlogin = GoogleFonts.poppins(
 TextStyle numlogin = GoogleFonts.poppins(
     fontSize: 14, color: white, fontWeight: FontWeight.w500);    
    
-
+TextStyle numlagu = GoogleFonts.poppins(
+    fontSize: 12, color: white, fontWeight: FontWeight.w600); 
 
 
 TextStyle btnlogin = GoogleFonts.poppins(

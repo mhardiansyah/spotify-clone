@@ -21,7 +21,6 @@ class ModelRekomend extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisSize: MainAxisSize.min,
             children: [
               Image.asset(
                 imageRekomend,
