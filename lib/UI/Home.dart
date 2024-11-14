@@ -75,22 +75,22 @@ class _HomeState extends State<Home> {
             physics: NeverScrollableScrollPhysics(),
             children: [
               ModelRekomend(
-                  imageRekomend: 'assets/rekomend1.png',
+                  imageRekomend: 'assets/image/rekomend1.png',
                   namaRekomend: 'Liked Songs'),
               ModelRekomend(
-                  imageRekomend: 'assets/rekomend2.png',
+                  imageRekomend: 'assets/image/rekomend2.png',
                   namaRekomend: 'Emotional Songs'),
               ModelRekomend(
-                  imageRekomend: 'assets/rekomend3.png',
+                  imageRekomend: 'assets/image/rekomend3.png',
                   namaRekomend: 'Origins/Deluxe'),
               ModelRekomend(
-                  imageRekomend: 'assets/rekomend4.png',
+                  imageRekomend: 'assets/image/rekomend4.png',
                   namaRekomend: 'Augustten Ft Jhesy'),
               ModelRekomend(
-                  imageRekomend: 'assets/rekomend5.png',
+                  imageRekomend: 'assets/image/rekomend5.png',
                   namaRekomend: 'A Place We Knew'),
               ModelRekomend(
-                  imageRekomend: 'assets/rekomend6.png',
+                  imageRekomend: 'assets/image/rekomend6.png',
                   namaRekomend: '1000 Forms Of Fear'),
             ],
           ),
@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('assets/lagu1.png', fit: BoxFit.cover),
+              Image.asset('assets/image/lagu1.png', fit: BoxFit.cover),
               SizedBox(width: 18),
               Padding(
                 padding: EdgeInsets.only(top: 17, right: 16, bottom: 24),
@@ -166,27 +166,27 @@ class _HomeState extends State<Home> {
           child: Row(
             children: [
               ModelHome(
-                  imagehome: 'assets/laguhome1.png',
+                  imagehome: 'assets/image/laguhome1.png',
                   name: 'Nabi palsu',
                   desc: 'Single Hindia'),
               SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/laguhome2.png',
+                  imagehome: 'assets/image/laguhome2.png',
                   name: 'Numb Little Bug',
                   desc: 'Single Em Beihold'),
               SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/laguhome3.png',
+                  imagehome: 'assets/image/laguhome3.png',
                   name: 'Evering Road (Deluxe)',
                   desc: 'Album Tom Grennan'),
               SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/laguhome2.png',
+                  imagehome: 'assets/image/laguhome2.png',
                   name: 'Numb Little Bug',
                   desc: 'Single Em Beihold'),
               SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/laguhome3.png',
+                  imagehome: 'assets/image/laguhome3.png',
                   name: 'Nabi palsu',
                   desc: 'Single   Hindia'),
               SizedBox(width: 17),

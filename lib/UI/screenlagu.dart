@@ -112,7 +112,7 @@ class _ScreenlaguState extends State<Screenlagu> {
           end: Alignment.bottomCenter,
         )),
         child: Padding(
-          padding: const EdgeInsets.only(right: 29, left: 29, top: 52),
+          padding:  EdgeInsets.only(right: 29, left: 29, top: 52),
           child: Column(
             children: [header(), body()],
           ),
