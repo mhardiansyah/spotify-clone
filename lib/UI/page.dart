@@ -27,9 +27,6 @@ class _pagetState extends State<page> {
     Center(
       child: Library(),
     ),
-    Center(
-      child: Premium(),
-    ),
   ];
   void _onTapTapp(int index) {
     setState(() {
@@ -54,8 +51,6 @@ class _pagetState extends State<page> {
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
           BottomNavigationBarItem(
               icon: Icon(Icons.library_books), label: ' Your Library'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.workspace_premium_outlined), label: 'Premium'),
         ],
       ),
     );
