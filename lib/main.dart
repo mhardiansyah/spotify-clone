@@ -1,4 +1,6 @@
 // import 'package:firebase_core/firebase_core.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify/UI/Splash.dart';

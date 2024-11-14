@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/Themes/colors.dart';
-import 'package:spotify/UI/auth/Login.dart';
+import 'package:spotify/UI/auth/login.dart';
 import 'package:spotify/UI/auth/Register.dart';
 
 class onboard extends StatefulWidget {
@@ -133,28 +133,7 @@ class _onboardState extends State<onboard> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account?  ",
-                    style: numlogin,
-                  ),
-                  InkWell(
-                    onTap: () => keLogin(context),
-                    child: Text(
-                      'Login',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: second),
-                    ),
-                  )
-                ],
-              ),
+              
             ],
           ),
         ),
@@ -162,10 +141,5 @@ class _onboardState extends State<onboard> {
     );
   }
 
-  keLogin(BuildContext context) => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => Login(),
-        ),
-      );
+  
 }

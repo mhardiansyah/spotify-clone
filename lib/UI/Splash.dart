@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
@@ -22,7 +24,7 @@ class _SplashState extends State<Splash> {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => page(),
+            builder: (context) => onboard(),
           ));
     });
   }
