@@ -105,17 +105,13 @@ class _ScreenlaguState extends State<Screenlagu> {
                 ],
               ),
               Spacer(),
-              isFavorite
-                  ? Icon(
-                      Icons.favorite_rounded,
-                      size: 24,
-                      color: second,
-                    )
-                  : Icon(
-                      Icons.favorite_border_outlined,
-                      size: 24,
-                      color: white,
-                    ),
+              Icon(
+                isFavorite
+                    ? Icons.favorite_rounded
+                    : Icons.favorite_border_outlined,
+                size: 24,
+                color: isFavorite ? second : white,
+              )
             ],
           ),
           SizedBox(height: 20),

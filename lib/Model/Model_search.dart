@@ -40,32 +40,16 @@ class modelsearch extends StatelessWidget {
             width: 13,
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 namalagu,
                 style: judul_lagu2,
               ),
-              Row(
-                children: [
-                  // if(icon1!= null && icon1!.isNotEmpty)
-                  // Icon(
-                  //   icon1! as IconData?,
-                  //   color: second,
-                  //   size: 24,
-                  // ),
-                  // SizedBox(width: 4,),
-                  // if(icon2!= null && icon2!.isNotEmpty)
-                  // Icon(
-                  //   icon2! as IconData?,
-                  //   color: second,
-                  //   size: 24,
-                  // ),
-                  Text(
-                    desc,
-                    style: sub_Library2,
-                  ),
-                ],
+              Text(
+                desc,
+                style: sub_Library2,
               )
             ],
           )

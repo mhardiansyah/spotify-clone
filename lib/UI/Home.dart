@@ -13,6 +13,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  bool isFavorite = false;
+
   Widget header() {
     return Positioned(
       left: 0,
@@ -30,7 +32,7 @@ class _HomeState extends State<Home> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         )),
-        padding: EdgeInsets.only(top: 60, left: 13, right: 13),
+        padding: const EdgeInsets.only(top: 60, left: 13, right: 13),
         width: double.infinity,
         height: 100,
         child: Row(
@@ -39,7 +41,7 @@ class _HomeState extends State<Home> {
               'Good evening',
               style: judul,
             ),
-            Spacer(),
+            const Spacer(),
             Icon(
               Iconsax.notification,
               size: 20,
@@ -51,7 +53,7 @@ class _HomeState extends State<Home> {
               size: 20,
               color: white,
             ),
-            SizedBox(width: 30),
+            const SizedBox(width: 30),
             Icon(Iconsax.setting_2, size: 20, color: white),
           ],
         ),
@@ -65,7 +67,7 @@ class _HomeState extends State<Home> {
       children: [
         SizedBox(height: 100),
         Container(
-          margin: EdgeInsets.only(bottom: 40),
+          margin: const EdgeInsets.only(bottom: 40),
           child: GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 9,
@@ -102,7 +104,7 @@ class _HomeState extends State<Home> {
               radius: 32,
               backgroundImage: AssetImage('assets/avatar1.png'),
             ),
-            SizedBox(width: 12),
+            const SizedBox(width: 12),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -118,49 +120,66 @@ class _HomeState extends State<Home> {
         ),
         SizedBox(height: 18),
         Container(
-          margin: EdgeInsets.only(bottom: 45),
+          margin: const EdgeInsets.only(bottom: 45),
           width: 380,
           height: 154,
           decoration: BoxDecoration(
             color: rekomend,
             borderRadius: BorderRadiusDirectional.circular(10),
           ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.asset('assets/image/lagu1.png', fit: BoxFit.cover),
-              SizedBox(width: 18),
-              Padding(
-                padding: EdgeInsets.only(top: 17, right: 16, bottom: 24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Hurtless (Acoustic)', style: numlagu),
-                    Text(
-                      'Single    Dean Lewis',
-                      style: GoogleFonts.inter(fontSize: 11, color: whiteabu),
-                    ),
-                    Spacer(),
-                    Row(
-                      children: [
-                        Icon(Icons.favorite_border_outlined,
-                            size: 24, color: white),
-                        SizedBox(width: 138),
-                        CircleAvatar(
-                          radius: 15,
-                          child: Icon(Icons.play_arrow,
-                              size: 23, color: Colors.black),
-                        ),
-                      ],
-                    ),
-                  ],
+          child: GestureDetector(
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                    content: Text('Lagu berhasil ditambahkan ke favorit')),
+              );
+              setState(() {
+                isFavorite = !isFavorite;
+              });
+            },
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Image.asset('assets/image/lagu1.png', fit: BoxFit.cover),
+                const SizedBox(width: 18),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(top: 17, right: 16, bottom: 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Hurtless (Acoustic)', style: numlagu),
+                      Text(
+                        'Single    Dean Lewis',
+                        style: GoogleFonts.inter(fontSize: 11, color: whiteabu),
+                      ),
+                      const Spacer(),
+                      Row(
+                        children: [
+                          Icon(
+                            isFavorite
+                                ? Icons.favorite_rounded
+                                : Icons.favorite_border_outlined,
+                            size: 24,
+                            color: isFavorite ? second : white,
+                          ),
+                          SizedBox(width: 138),
+                          CircleAvatar(
+                            radius: 15,
+                            child: Icon(Icons.play_arrow,
+                                size: 23, color: Colors.black),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
         Text('Discover something new', style: judul),
-        SizedBox(height: 19),
+        const SizedBox(height: 19),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -199,11 +218,11 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Text('Just the hits', style: judul),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SingleChildScrollView(
@@ -240,11 +259,11 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Text('More of what you like', style: judul),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SingleChildScrollView(
@@ -285,11 +304,11 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Text('Your top mixes', style: judul),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SingleChildScrollView(
@@ -325,7 +344,7 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Row(
@@ -355,7 +374,7 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SingleChildScrollView(
@@ -368,23 +387,23 @@ class _HomeState extends State<Home> {
                   name:
                       'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/2.png',
                   name: 'Harry Styles, Ed Sheeran,\nPassenger, Dean Lewis',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/2.png',
                   name:
                       'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/1.png',
                   name: 'Harry Styles, Ed Sheeran,\nPassenger, Dean Lewis',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/2.png',
                   name:
@@ -398,7 +417,7 @@ class _HomeState extends State<Home> {
           height: 40,
         ),
         Text('Uniquely yours', style: judul),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SingleChildScrollView(
@@ -410,13 +429,13 @@ class _HomeState extends State<Home> {
                   imagehome: 'assets/image/Uniquely1.png',
                   name: 'Songs you love right now',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/Uniquely2.png',
                   name:
                       'We made you a personalized\nplaylist with songs to take you ...',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/Uniquely1.png',
                   name: 'Your past favorites',

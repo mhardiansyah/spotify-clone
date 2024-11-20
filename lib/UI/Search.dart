@@ -22,32 +22,32 @@ class _SearchState extends State<Search> {
     ),
     modelsearch(
       image: 'assets/image/libary2.png',
-      namalagu: 'Liked Songs',
+      namalagu: 'Emotional Songs',
       desc: 'Playlist . 266 songs',
     ),
     modelsearch(
       image: 'assets/image/libary3.png',
-      namalagu: 'Liked Songs',
+      namalagu: 'Augustten Ft Jhesy 😇',
       desc: 'Playlist . 266 songs',
     ),
     modelsearch(
       image: 'assets/image/libary4.png',
-      namalagu: 'Liked Songs',
+      namalagu: 'All the Little Lights (Deluxe Version)',
       desc: 'Playlist . 266 songs',
     ),
     modelsearch(
       image: 'assets/image/libary5.png',
-      namalagu: 'Liked Songs',
+      namalagu: 'A Place We Knew',
       desc: 'Playlist . 266 songs',
     ),
     modelsearch(
       image: 'assets/image/libary6.png',
-      namalagu: 'Liked Songs',
+      namalagu: 'Whispers',
       desc: 'Playlist . 266 songs',
     ),
     modelsearch(
       image: 'assets/image/libary7.png',
-      namalagu: 'Liked Songs',
+      namalagu: 'Night Visions',
       desc: 'Playlist . 266 songs',
     ),
   ];
@@ -176,7 +176,6 @@ class _SearchState extends State<Search> {
           return Column(
             children: [
               product,
-              
             ],
           );
         }).toList(),
