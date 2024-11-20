@@ -8,7 +8,22 @@ class Premium extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryColor,
-      body: Column(),
+      body: Padding(
+        padding: const EdgeInsets.only(right: 17, left: 17, top: 39),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(
+                Icons.keyboard_arrow_left_outlined,
+                size: 26,
+                color: white,
+              ),
+             const SizedBox(height: 29,),
+
+
+          ],
+        ),
+      ),
     );
   }
 }

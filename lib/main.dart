@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify/UI/Splash.dart';
+import 'package:spotify/UI/auth/testting.dart';
 
 void main() {
   // WidgetsFlutterBinding.ensureInitialized();

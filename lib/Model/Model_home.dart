@@ -5,7 +5,7 @@ import 'package:spotify/UI/screenlagu.dart';
 class ModelHome extends StatelessWidget {
   final String imagehome;
   final String name;
-  final String desc;
+  final String? desc;
 
   const ModelHome(
       {super.key,
@@ -15,6 +15,12 @@ class ModelHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextStyle containerstyle;
+    if (name == 'Hurry up, We’re Dreaming') {
+      containerstyle = detail3;
+    } else {
+      containerstyle = detail;
+    }
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -23,7 +29,7 @@ class ModelHome extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(bottom: 21),
         width: 167,
-        height: 220,
+        height: 230,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -37,15 +43,18 @@ class ModelHome extends StatelessWidget {
             ),
             Text(
               name,
-              style: detail,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: containerstyle,
             ),
             SizedBox(
               height: 5,
             ),
-            Text(
-              desc,
-              style: detail2,
-            ),
+            if (desc != null && desc!.isNotEmpty)
+              Text(
+                desc!,
+                style: detail2,
+              ),
           ],
         ),
       ),

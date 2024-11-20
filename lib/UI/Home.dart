@@ -166,7 +166,13 @@ class _HomeState extends State<Home> {
           child: Row(
             children: [
               ModelHome(
-                  imagehome: 'assets/image/laguhome1.png',
+                  imagehome: 'assets/image/laguhome4.png',
+                  name:
+                      'Your weekly mixtape of fresh\nmusic. Enjoy new music and d...',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/laguhome5.png',
                   name: 'Nabi palsu',
                   desc: 'Single Hindia'),
               SizedBox(width: 17),
@@ -189,6 +195,283 @@ class _HomeState extends State<Home> {
                   imagehome: 'assets/image/laguhome3.png',
                   name: 'Nabi palsu',
                   desc: 'Single   Hindia'),
+              SizedBox(width: 17),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Text('Just the hits', style: judul),
+        SizedBox(
+          height: 20,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ModelHome(
+                  imagehome: 'assets/image/just1.png',
+                  name:
+                      'Your weekly mixtape of fresh\nmusic. Enjoy new music and d...',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/just2.png',
+                  name: 'Numb Little Bug',
+                  desc: 'Single   Em Beihold'),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/just3.png',
+                  name: 'Evering Road (Deluxe)',
+                  desc: 'Album Tom Grennan'),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/just2.png',
+                  name: 'Numb Little Bug',
+                  desc: 'Single Em Beihold'),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/just3.png',
+                  name: 'Nabi palsu',
+                  desc: 'Single   Hindia'),
+              SizedBox(width: 17),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Text('More of what you like', style: judul),
+        SizedBox(
+          height: 20,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ModelHome(
+                  imagehome: 'assets/image/more1.png',
+                  name:
+                      'Maverick City Music, Hillsong\nUNITED, Hillsong Worship, Bet...',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/more2.png',
+                  name:
+                      'Ed Sheeran, Passenger, Justin\nBieber, Dean Lewis, Taylor Swift',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/more3.png',
+                  name:
+                      'Yo-Yo Ma, Ludovico Einaudi,\nAlexis Ffrench, Daniel Hope, Yi...',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/more2.png',
+                  name:
+                      'Ed Sheeran, Passenger, Justin\nBieber, Dean Lewis, Taylor Swift',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/more3.png',
+                  name:
+                      'Yo-Yo Ma, Ludovico Einaudi,\nAlexis Ffrench, Daniel Hope, Yi...',
+                  desc: ''),
+              SizedBox(width: 17),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Text('Your top mixes', style: judul),
+        SizedBox(
+          height: 20,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ModelHome(
+                  imagehome: 'assets/image/mix1.png',
+                  name: 'Dean Lewis, Lord Huron, Sia and\nmore',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/mix2.png',
+                  name: 'Ed Sheeran, Marshmellow, Tall\nHeights and more',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/mix3.png',
+                  name: 'Imagine Dragons, Rihanna,\nJustin Bieber and more',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/mix2.png',
+                  name: 'Ed Sheeran, Marshmellow, Tall\nHeights and more',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/mix3.png',
+                  name: 'Imagine Dragons, Rihanna,\nJustin Bieber and more',
+                  desc: ''),
+              SizedBox(width: 17),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Row(
+          children: [
+            CircleAvatar(
+              radius: 20,
+              child: Image.asset('assets/image/Pic.png'),
+            ),
+            SizedBox(
+              width: 12,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'MORE LIKE',
+                  style: GoogleFonts.poppins(
+                      fontSize: 9,
+                      fontWeight: FontWeight.w600,
+                      color: whiteWithOpacity70),
+                ),
+                Text(
+                  'Kodaline',
+                  style: judul2,
+                )
+              ],
+            )
+          ],
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ModelHome(
+                  imagehome: 'assets/image/1.png',
+                  name:
+                      'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/2.png',
+                  name: 'Harry Styles, Ed Sheeran,\nPassenger, Dean Lewis',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/2.png',
+                  name:
+                      'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/1.png',
+                  name: 'Harry Styles, Ed Sheeran,\nPassenger, Dean Lewis',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/2.png',
+                  name:
+                      'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
+                  desc: ''),
+              SizedBox(width: 17),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Text('Uniquely yours', style: judul),
+        SizedBox(
+          height: 20,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ModelHome(
+                  imagehome: 'assets/image/Uniquely1.png',
+                  name: 'Songs you love right now',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/Uniquely2.png',
+                  name:
+                      'We made you a personalized\nplaylist with songs to take you ...',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/Uniquely1.png',
+                  name: 'Your past favorites',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/Uniquely2.png',
+                  name:
+                      'We made you a personalized\nplaylist with songs to take you ...',
+                  desc: ''),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/Uniquely1.png',
+                  name: 'Your past favorites',
+                  desc: ''),
+              SizedBox(width: 17),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 40,
+        ),
+        Text('Jump back in', style: judul),
+        SizedBox(
+          height: 20,
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ModelHome(
+                  imagehome: 'assets/image/back1.png',
+                  name: 'Hurry up, We’re Dreaming',
+                  desc: 'Album . M83'),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/back2.png',
+                  name: 'Chapters',
+                  desc: 'Album . James TW'),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/back3.png',
+                  name: 'Jess',
+                  desc: 'Playlist . Jhesy'),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/back2.png',
+                  name: 'Chapters',
+                  desc: 'Album . James TW'),
+              SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/back3.png',
+                  name: 'Jess',
+                  desc: 'Playlist . Jhesy'),
               SizedBox(width: 17),
             ],
           ),

@@ -121,12 +121,101 @@ class _LibraryState extends State<Library> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          height: 22,
+          height: 180,
         ),
         Row(
-          children: [],
+          children: [
+            Icon(
+              Icons.swap_vert,
+              size: 15,
+              color: white,
+            ),
+            SizedBox(
+              width: 14,
+            ),
+            Text(
+              'Most recent',
+              style: sub_Library2,
+            ),
+            Spacer(),
+            Icon(Icons.list, size: 15, color: white),
+          ],
         ),
-        
+        SizedBox(
+          height: 15,
+        ),
+        Container(
+          child: GridView.count(
+            crossAxisCount: 2,
+            crossAxisSpacing: 14,
+            mainAxisSpacing: 32,
+            shrinkWrap: true,
+            childAspectRatio: 3 / 4,
+            physics: NeverScrollableScrollPhysics(),
+            children: [
+              ModelLibary(
+                  imagelibary: 'assets/image/libary1.png',
+                  namalibary: 'Liked Songs',
+                  pemilik: 'Playlist .266 songs'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary2.png',
+                  namalibary: 'Emotional Songs',
+                  pemilik: 'Playlist .Jhesy'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary3.png',
+                  namalibary: 'Augustten Ft Jhesy 😇',
+                  pemilik: 'Playlist .Augustten'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary4.png',
+                  namalibary: 'All the Little Lights ',
+                  pemilik: 'Album .Passenger'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary5.png',
+                  namalibary: 'A Place We Knew',
+                  pemilik: 'Album .Dean Lewis'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary6.png',
+                  namalibary: 'Whispers',
+                  pemilik: 'Album .Passenger'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary7.png',
+                  namalibary: 'Night Visions',
+                  pemilik: 'Album .Imagine Dragons'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary8.png',
+                  namalibary: 'Origins (Deluxe)',
+                  pemilik: 'Album .Imagine Dragons'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary9.png',
+                  namalibary: 'Evolve',
+                  pemilik: 'Album .Imagine Dragons'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary10.png',
+                  namalibary: 'Wonder',
+                  pemilik: 'Album .Hillsong UNITED'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary11.png',
+                  namalibary: '1000 Forms Of Fear',
+                  pemilik: 'Album .Sia'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary12.png',
+                  namalibary: 'Cry Forever',
+                  pemilik: 'Album .Amy Shark'),
+              ModelLibary(
+                  imagelibary: 'assets/image/libary13.png',
+                  namalibary: 'ROOTS',
+                  pemilik: 'Album .The Cavemen'),
+              ModelLibary(
+                  imagelibary: 'assets/image/addlibary1.png',
+                  namalibary: '                    Add artists',
+                  pemilik: ''),
+              ModelLibary(
+                  imagelibary: 'assets/image/addlibary2.png',
+                  namalibary: 'Add podcasts & shows',
+                  pemilik: ''),
+            ],
+          ),
+        )
       ],
     );
   }

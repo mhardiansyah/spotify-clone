@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:spotify/Themes/colors.dart';
 import 'package:spotify/Themes/temalibary.dart';
 
 class ModelLibary extends StatelessWidget {
   final String imagelibary;
   final String namalibary;
-  final String pemilik;
+  final String? pemilik;
 
   const ModelLibary(
       {super.key,
@@ -23,9 +24,9 @@ class ModelLibary extends StatelessWidget {
 
     return Container(
       width: 184,
-      height: 226,
+      height: 246,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
             imagelibary,
@@ -38,10 +39,11 @@ class ModelLibary extends StatelessWidget {
             namalibary,
             style: containerstyle,
           ),
-          Text(
-            pemilik,
-            style: detail_libary,
-          )
+          if (pemilik != null && pemilik!.isNotEmpty)
+            Text(
+              pemilik!,
+              style: detail_libary,
+            )
         ],
       ),
     );

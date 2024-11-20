@@ -10,12 +10,21 @@ class Screenlagu extends StatefulWidget {
 }
 
 class _ScreenlaguState extends State<Screenlagu> {
-  @override
+  bool isFavorite = false;
+  bool isPlay = false;
+
+  void _togglePlay() {
+    setState(() {
+      isPlay = !isPlay; // Ubah status play/pause
+    });
+  }
+
   Widget header() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             GestureDetector(
               onVerticalDragDown: (details) {
@@ -40,7 +49,7 @@ class _ScreenlaguState extends State<Screenlagu> {
                 Text(
                   'Liked Songs',
                   style: subJudul,
-                )
+                ),
               ],
             ),
             Spacer(),
@@ -48,18 +57,18 @@ class _ScreenlaguState extends State<Screenlagu> {
               Icons.more_vert_outlined,
               size: 19,
               color: white,
-            )
+            ),
           ],
         ),
         SizedBox(
           height: 112,
         ),
         Container(
-          margin: EdgeInsets.only(bottom: 106),
+          margin: EdgeInsets.only(bottom: 50),
           width: 364,
           height: 364,
           child: Image.asset(
-            'assets/laguhome1.png',
+            'assets/image/laguhome5.png',
             fit: BoxFit.cover,
           ),
         ),
@@ -68,53 +77,142 @@ class _ScreenlaguState extends State<Screenlagu> {
   }
 
   Widget body() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Nabi Palsu',
-                  style: sublagu,
-                ),
-                Text(
-                  'Single Hindia',
-                  style: GoogleFonts.poppins(fontSize: 14, color: white),
-                )
-              ],
+    return GestureDetector(
+      onTap: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Lagu berhasil ditambahkan ke favorit')),
+        );
+        setState(() {
+          isFavorite = !isFavorite;
+        });
+      },
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Nabi Palsu',
+                    style: sublagu,
+                  ),
+                  Text(
+                    'Single Hindia',
+                    style: GoogleFonts.poppins(fontSize: 14, color: white),
+                  ),
+                ],
+              ),
+              Spacer(),
+              isFavorite
+                  ? Icon(
+                      Icons.favorite_rounded,
+                      size: 24,
+                      color: second,
+                    )
+                  : Icon(
+                      Icons.favorite_border_outlined,
+                      size: 24,
+                      color: white,
+                    ),
+            ],
+          ),
+          SizedBox(height: 20),
+          SliderTheme(
+            data: SliderTheme.of(context).copyWith(
+              trackHeight: 4,
             ),
-            Spacer(),
-            Icon(
-              Icons.favorite_border_outlined,
-              size: 24,
-              color: white,
-            )
-          ],
-        )
-      ],
+            child: Slider(
+              value: 0.0,
+              min: 0.0,
+              max: 180.0,
+              activeColor: white,
+              inactiveColor: whiteabu,
+              onChanged: (value) {
+                // Fungsi untuk mengubah posisi slider (placeholder)
+                setState(() {});
+              },
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '0:00',
+                style: GoogleFonts.poppins(fontSize: 12, color: white),
+              ),
+              Text(
+                '3:00',
+                style: GoogleFonts.poppins(fontSize: 12, color: white),
+              ),
+            ],
+          ),
+          SizedBox(height: 21),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Icon(Icons.shuffle, size: 24, color: white),
+              Icon(Icons.skip_previous, size: 32, color: white),
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: white,
+                ),
+                child: IconButton(
+                  onPressed: _togglePlay,
+                  icon: Icon(
+                    isPlay ? Icons.pause : Icons.play_arrow,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+              Icon(Icons.skip_next, size: 32, color: white),
+              Icon(Icons.repeat, size: 24, color: white),
+            ],
+          ),
+          SizedBox(height: 28),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Icon(Icons.devices, size: 24, color: white),
+              Spacer(),
+              Icon(Icons.share_rounded, size: 24, color: white),
+              SizedBox(width: 38),
+              Icon(Icons.queue_music_rounded, size: 24, color: white),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-          colors: [
-            Color(0xff737373),
-            Color(0xff121212).withOpacity(0.8),
-          ],
-          stops: [0.0, 1.0],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        )),
+          gradient: LinearGradient(
+            colors: [
+              Color(0xff737373),
+              Color(0xff121212).withOpacity(0.8),
+            ],
+            stops: [0.0, 1.0],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
         child: Padding(
-          padding:  EdgeInsets.only(right: 29, left: 29, top: 52),
+          padding: const EdgeInsets.only(
+            right: 29,
+            left: 29,
+            top: 52,
+          ),
           child: Column(
-            children: [header(), body()],
+            children: [
+              header(),
+              body(),
+            ],
           ),
         ),
       ),

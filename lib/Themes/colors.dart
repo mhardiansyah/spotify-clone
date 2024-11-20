@@ -30,6 +30,8 @@ Color textcolor = Colors.white;
 
 TextStyle judul = GoogleFonts.poppins(
     fontSize: 19, color: white, fontWeight: FontWeight.w700);
+TextStyle judul2 =
+    GoogleFonts.inter(fontSize: 19, color: white, fontWeight: FontWeight.w700);
 
 TextStyle subJudul = GoogleFonts.poppins(
     fontSize: 11, color: white, fontWeight: FontWeight.w700);
@@ -44,6 +46,9 @@ TextStyle detail = GoogleFonts.poppins(
 
 TextStyle detail2 = GoogleFonts.poppins(
     fontSize: 11, color: whiteWithOpacity70, fontWeight: FontWeight.w400);
+
+TextStyle detail3 = GoogleFonts.poppins(
+    fontSize: 11, color: white, fontWeight: FontWeight.w400);
 
 TextStyle judullogin = GoogleFonts.poppins(
     fontSize: 33, color: white, fontWeight: FontWeight.w700);
