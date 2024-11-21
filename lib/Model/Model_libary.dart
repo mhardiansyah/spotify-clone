@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:spotify/Themes/colors.dart';
 import 'package:spotify/Themes/temalibary.dart';
+import 'package:spotify/UI/like_song.dart';
 
 class ModelLibary extends StatelessWidget {
-  final String imagelibary;
+   final String  imagelibary;
   final String namalibary;
   final String? pemilik;
 
@@ -22,29 +23,38 @@ class ModelLibary extends StatelessWidget {
       containerstyle = sub_Library2;
     }
 
-    return Container(
-      width: 184,
-      height: 246,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image.asset(
-            imagelibary,
-            width: double.infinity,
-          ),
-          SizedBox(
-            height: 13,
-          ),
-          Text(
-            namalibary,
-            style: containerstyle,
-          ),
-          if (pemilik != null && pemilik!.isNotEmpty)
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => LikeSong(),
+            ));
+      },
+      child: Container(
+        width: 184,
+        height: 246,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              imagelibary,
+              width: double.infinity,
+            ),
+            SizedBox(
+              height: 13,
+            ),
             Text(
-              pemilik!,
-              style: detail_libary,
-            )
-        ],
+              namalibary,
+              style: containerstyle,
+            ),
+            if (pemilik != null && pemilik!.isNotEmpty)
+              Text(
+                pemilik!,
+                style: detail_libary,
+              )
+          ],
+        ),
       ),
     );
   }

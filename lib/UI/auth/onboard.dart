@@ -133,13 +133,10 @@ class _onboardState extends State<onboard> {
                   ),
                 ),
               ),
-              
             ],
           ),
         ),
       ),
     );
   }
-
-  
 }

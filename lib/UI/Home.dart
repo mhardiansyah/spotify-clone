@@ -127,34 +127,34 @@ class _HomeState extends State<Home> {
             color: rekomend,
             borderRadius: BorderRadiusDirectional.circular(10),
           ),
-          child: GestureDetector(
-            onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                    content: Text('Lagu berhasil ditambahkan ke favorit')),
-              );
-              setState(() {
-                isFavorite = !isFavorite;
-              });
-            },
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset('assets/image/lagu1.png', fit: BoxFit.cover),
-                const SizedBox(width: 18),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(top: 17, right: 16, bottom: 24),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Hurtless (Acoustic)', style: numlagu),
-                      Text(
-                        'Single    Dean Lewis',
-                        style: GoogleFonts.inter(fontSize: 11, color: whiteabu),
-                      ),
-                      const Spacer(),
-                      Row(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset('assets/image/lagu1.png', fit: BoxFit.cover),
+              const SizedBox(width: 18),
+              Padding(
+                padding: const EdgeInsets.only(top: 17, right: 16, bottom: 24),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Hurtless (Acoustic)', style: numlagu),
+                    Text(
+                      'Single    Dean Lewis',
+                      style: GoogleFonts.inter(fontSize: 11, color: whiteabu),
+                    ),
+                    const Spacer(),
+                    GestureDetector(
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content:
+                                  Text('Lagu berhasil ditambahkan ke favorit')),
+                        );
+                        setState(() {
+                          isFavorite = !isFavorite;
+                        });
+                      },
+                      child: Row(
                         children: [
                           Icon(
                             isFavorite
@@ -171,11 +171,11 @@ class _HomeState extends State<Home> {
                           ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
         Text('Discover something new', style: judul),

@@ -45,7 +45,7 @@ TextStyle detail = GoogleFonts.poppins(
     fontSize: 14, color: white, fontWeight: FontWeight.w500);
 
 TextStyle detail2 = GoogleFonts.poppins(
-    fontSize: 11, color: whiteWithOpacity70, fontWeight: FontWeight.w400);
+    fontSize: 11, color: whiteWithOpacity70, fontWeight: FontWeight.w500);
 
 TextStyle detail3 = GoogleFonts.poppins(
     fontSize: 11, color: white, fontWeight: FontWeight.w400);
