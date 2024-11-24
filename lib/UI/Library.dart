@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:spotify/Model/Model_libary.dart';
 import 'package:spotify/Themes/colors.dart';
 import 'package:spotify/Themes/temalibary.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Library extends StatefulWidget {
   const Library({super.key});

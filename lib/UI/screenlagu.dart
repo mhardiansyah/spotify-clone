@@ -21,56 +21,60 @@ class _ScreenlaguState extends State<Screenlagu> {
 
   Widget header() {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            GestureDetector(
-              onVerticalDragDown: (details) {
-                Navigator.pop(context);
-              },
-              child: Icon(
-                Icons.keyboard_arrow_down_sharp,
-                size: 26,
-                color: white,
-              ),
-            ),
-            SizedBox(
-              width: 92,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(
-                  'PLAYING FROM YOUR LIBRARY',
-                  style: numjudul,
+                GestureDetector(
+                  onVerticalDragDown: (details) {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.keyboard_arrow_down_sharp,
+                    size: 26,
+                    color: white,
+                  ),
                 ),
-                Text(
-                  'Liked Songs',
-                  style: subJudul,
+                SizedBox(
+                  width: 92,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'PLAYING FROM YOUR LIBRARY',
+                      style: numjudul,
+                    ),
+                    Text(
+                      'Liked Songs',
+                      style: subJudul,
+                    ),
+                  ],
+                ),
+                Spacer(),
+                Icon(
+                  Icons.more_vert_outlined,
+                  size: 19,
+                  color: white,
                 ),
               ],
             ),
-            Spacer(),
-            Icon(
-              Icons.more_vert_outlined,
-              size: 19,
-              color: white,
+            SizedBox(
+              height: 112,
+            ),
+            Container(
+              margin: EdgeInsets.only(bottom: 50),
+              width: 364,
+              height: 364,
+              child: Image.asset(
+                'assets/image/laguhome1.png',
+                fit: BoxFit.cover,
+              ),
             ),
           ],
-        ),
-        SizedBox(
-          height: 112,
-        ),
-        Container(
-          margin: EdgeInsets.only(bottom: 50),
-          width: 364,
-          height: 364,
-          child: Image.asset(
-            'assets/image/laguhome5.png',
-            fit: BoxFit.cover,
-          ),
         ),
       ],
     );

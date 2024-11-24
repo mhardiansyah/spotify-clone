@@ -191,8 +191,8 @@ class _HomeState extends State<Home> {
                   desc: ''),
               SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/image/laguhome5.png',
-                  name: 'Nabi palsu',
+                  imagehome: 'assets/image/laguhome1.png',
+                  name: 'rumah ke rumah',
                   desc: 'Single Hindia'),
               SizedBox(width: 17),
               ModelHome(

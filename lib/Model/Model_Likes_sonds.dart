@@ -3,28 +3,25 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify/Themes/colors.dart';
 import 'package:spotify/Themes/temalibary.dart';
 
-class MyWidget extends StatefulWidget {
+class ModelLikesSonds extends StatefulWidget {
   final String image;
   final String nama_lagu;
   final String desc;
   final String icon_download;
-  final String icon_download2;
-  final String? icon_downloa3;
 
-  const MyWidget(
-      {super.key,
-      required this.image,
-      required this.nama_lagu,
-      required this.desc,
-      required this.icon_download,
-      required this.icon_download2,
-      this.icon_downloa3});
+  const ModelLikesSonds({
+    super.key,
+    required this.image,
+    required this.nama_lagu,
+    required this.desc,
+    required this.icon_download,
+  });
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<ModelLikesSonds> createState() => _ModelLikesSondsState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _ModelLikesSondsState extends State<ModelLikesSonds> {
   bool isFavorite = false;
   @override
   Widget build(BuildContext context) {
@@ -34,12 +31,12 @@ class _MyWidgetState extends State<MyWidget> {
       child: GestureDetector(
         onTap: () {
           ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                    content: Text('Lagu berhasil ditambahkan ke favorit')),
-              );
-              setState(() {
-                isFavorite = !isFavorite;
-              });
+            const SnackBar(
+                content: Text('Lagu berhasil ditambahkan ke favorit')),
+          );
+          setState(() {
+            isFavorite = !isFavorite;
+          });
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -56,6 +53,7 @@ class _MyWidgetState extends State<MyWidget> {
                   style: judul_lagu2,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       color: whiteabu,
@@ -95,13 +93,19 @@ class _MyWidgetState extends State<MyWidget> {
                 ),
               ],
             ),
-                Icon(
-                  isFavorite ? Icons.favorite : Icons.favorite_border,
-                  color: isFavorite ? second : white,
-                  size: 24,
-                ),
-                const SizedBox(width: 40,),
-                Icon(Icons.more_vert, color: white, size: 24,)
+            Icon(
+              isFavorite ? Icons.favorite : Icons.favorite_border,
+              color: isFavorite ? second : white,
+              size: 24,
+            ),
+            const SizedBox(
+              width: 40,
+            ),
+            Icon(
+              Icons.more_vert,
+              color: white,
+              size: 24,
+            )
           ],
         ),
       ),
