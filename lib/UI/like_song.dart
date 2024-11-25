@@ -134,13 +134,12 @@ class _LikeSongState extends State<LikeSong> {
                               shape: BoxShape.circle,
                               color: Colors.black,
                             ),
-                            child: IconButton(
-                              icon: Icon(
+                            child: Center(
+                              child: Icon(
                                 Icons.shuffle,
                                 color: second,
-                                size: 20,
+                                size: 16,
                               ),
-                              onPressed: () {},
                             ),
                           ),
                         ),
@@ -152,11 +151,6 @@ class _LikeSongState extends State<LikeSong> {
               const SizedBox(
                 height: 38,
               ),
-              ModelLikesSonds(
-                  image: 'assets/image/likeSong1.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
-                  icon_download: '')
             ],
           )
         ],
@@ -165,8 +159,80 @@ class _LikeSongState extends State<LikeSong> {
   }
 
   Widget body() {
-    return Column(
-      children: [],
+    return Expanded(
+      child: ListView(
+        children: [
+          Column(
+            children: [
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong2.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong3.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong4.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong5.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong6.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong7.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong8.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong9.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong10.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong11.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong12.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong13.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+              ModelLikesSonds(
+                  image_lagu: 'assets/image/likeSong14.png',
+                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
+                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  icon_download: 'assets/Downloaded3.png'),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
@@ -193,9 +259,7 @@ class _LikeSongState extends State<LikeSong> {
           end: Alignment.center,
         )),
         child: Column(
-          children: [
-            header(),
-          ],
+          children: [header(), body()],
         ),
       ),
     );

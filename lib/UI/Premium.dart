@@ -157,7 +157,7 @@ class Premium extends StatelessWidget {
                       Text('Mengelola antrean lagu'),
                     ],
                   )),
-              SizedBox(
+             const SizedBox(
                 height: 67,
               ),
               Container(
@@ -179,7 +179,7 @@ class Premium extends StatelessWidget {
                             width: 25,
                             height: 25,
                           ),
-                          SizedBox(
+                        const  SizedBox(
                             width: 5,
                           ),
                           Text(
@@ -188,19 +188,19 @@ class Premium extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                     const SizedBox(
                         height: 22,
                       ),
                       Text(
                         'Individal',
                         style: premiumone,
                       ),
-                      SizedBox(height: 22),
+                    const  SizedBox(height: 22),
                       Text(
                         'Rp.10.999 selama 1 minggu',
                         style: numlagu,
                       ),
-                      SizedBox(
+                     const SizedBox(
                         height: 3,
                       ),
                       Expanded(
@@ -209,27 +209,27 @@ class Premium extends StatelessWidget {
                         thickness: 2,
                         color: Colors.black,
                       )),
-                      SizedBox(height: 5),
+                     const SizedBox(height: 5),
                       Text(
                         'Mendengarkan musik bebas iklan',
                         style: detail,
                       ),
-                      SizedBox(height: 11),
-                      Text('Download untuk mendengarkan offline'),
-                      SizedBox(height: 11),
-                      Text('Putar lagu dalam urutan apa pun'),
-                      SizedBox(height: 11),
-                      Text('Kualifikasi Audio tinggi'),
-                      SizedBox(height: 11),
-                      Text('Mendengarkan bersama teman secara real time'),
-                      SizedBox(height: 11),
-                      Text('Mengelola antrean lagu'),
+                     const SizedBox(height: 11),
+                    const  Text('Download untuk mendengarkan offline'),
+                    const  SizedBox(height: 11),
+                     const Text('Putar lagu dalam urutan apa pun'),
+                     const SizedBox(height: 11),
+                    const  Text('Kualifikasi Audio tinggi'),
+                    const  SizedBox(height: 11),
+                    const  Text('Mendengarkan bersama teman secara real time'),
+                     const SizedBox(height: 11),
+                     const Text('Mengelola antrean lagu'),
                     ],
                   )),
               SizedBox(height: 67),
               Container(
                   padding:
-                      EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
+                    const  EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
                   width: 380,
                   height: 400,
                   decoration: BoxDecoration(
@@ -246,7 +246,7 @@ class Premium extends StatelessWidget {
                             width: 25,
                             height: 25,
                           ),
-                          SizedBox(
+                        const  SizedBox(
                             width: 5,
                           ),
                           Text(
@@ -255,19 +255,19 @@ class Premium extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                    const  SizedBox(
                         height: 22,
                       ),
                       Text(
                         'Family',
                         style: premiumtwo,
                       ),
-                      SizedBox(height: 22),
+                    const  SizedBox(height: 22),
                       Text(
                         'Rp.10.999 selama 1 minggu',
                         style: numlagu,
                       ),
-                      SizedBox(
+                     const SizedBox(
                         height: 3,
                       ),
                       Expanded(
@@ -276,7 +276,7 @@ class Premium extends StatelessWidget {
                         thickness: 2,
                         color: Colors.black,
                       )),
-                      SizedBox(height: 5),
+                     const SizedBox(height: 5),
                       Text(
                         'Mendengarkan musik bebas iklan',
                         style: detail,
@@ -296,7 +296,7 @@ class Premium extends StatelessWidget {
               SizedBox(height: 67),
               Container(
                   padding:
-                      EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
+                    const  EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
                   width: 380,
                   height: 400,
                   decoration: BoxDecoration(
@@ -322,19 +322,19 @@ class Premium extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                    const  SizedBox(
                         height: 22,
                       ),
                       Text(
                         'Student',
                         style: premiumtri,
                       ),
-                      SizedBox(height: 22),
+                     const SizedBox(height: 22),
                       Text(
                         'Rp.10.999 selama 1 minggu',
                         style: numlagu,
                       ),
-                      SizedBox(
+                     const SizedBox(
                         height: 3,
                       ),
                       Expanded(

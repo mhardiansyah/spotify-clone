@@ -4,14 +4,14 @@ import 'package:spotify/Themes/colors.dart';
 import 'package:spotify/Themes/temalibary.dart';
 
 class ModelLikesSonds extends StatefulWidget {
-  final String image;
+  final String image_lagu;
   final String nama_lagu;
   final String desc;
   final String icon_download;
 
   const ModelLikesSonds({
     super.key,
-    required this.image,
+    required this.image_lagu,
     required this.nama_lagu,
     required this.desc,
     required this.icon_download,
@@ -26,6 +26,7 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(bottom: 17),
       width: 376,
       height: 52,
       child: GestureDetector(
@@ -42,10 +43,12 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Image.asset(widget.image_lagu, width: 52, height: 52),
             const SizedBox(
-              width: 13,
+              width: 10,
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -55,16 +58,26 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    if (widget.icon_download != null &&
+                        widget.icon_download!.isNotEmpty)
+                      Image.asset(
+                        widget.icon_download,
+                      ),
+                    const SizedBox(
+                      width: 4,
+                    ),
                     Container(
                       color: whiteabu,
                       width: 33,
                       height: 10,
-                      child: Text(
-                        'LYRICS',
-                        style: GoogleFonts.inter(
-                            fontSize: 7.5,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black),
+                      child: Center(
+                        child: Text(
+                          'LYRICS',
+                          style: GoogleFonts.inter(
+                              fontSize: 7.5,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black),
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -72,7 +85,6 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
                     ),
                     Container(
                       color: whiteabu,
-                      width: 33,
                       height: 10,
                       child: Text(
                         'E',
@@ -93,13 +105,16 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
                 ),
               ],
             ),
+            SizedBox(
+              width: 4,
+            ),
             Icon(
               isFavorite ? Icons.favorite : Icons.favorite_border,
               color: isFavorite ? second : white,
               size: 24,
             ),
             const SizedBox(
-              width: 40,
+              width: 8,
             ),
             Icon(
               Icons.more_vert,
