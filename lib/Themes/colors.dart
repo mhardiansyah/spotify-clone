@@ -26,6 +26,15 @@ LinearGradient backgrounds = LinearGradient(colors: [
 
 Color textcolor = Colors.white;
 
+Color premium1 = Color(0xFFFFD555);
+
+Color premium2 = Color(0xFFFFB4CD);
+
+Color premium3 = Color(0xFF67C5B9);
+
+Color premium4 = Color(0xFFC598FF);
+
+
 //text
 
 TextStyle judul = GoogleFonts.poppins(
@@ -72,3 +81,28 @@ TextStyle btnlogin = GoogleFonts.poppins(
   color: Colors.black,
   fontWeight: FontWeight.w600,
 );
+
+
+
+TextStyle btnlogin2 = GoogleFonts.poppins(
+  fontSize: 16,
+  color: Colors.black,
+  fontWeight: FontWeight.w600,
+);
+
+TextStyle pilihan = GoogleFonts.poppins(
+    fontSize: 14, color: primaryColor, fontWeight: FontWeight.bold);
+TextStyle pilihan2 = GoogleFonts.poppins(
+    fontSize: 14, color: white, fontWeight: FontWeight.bold);
+
+    TextStyle premium= GoogleFonts.poppins(
+    fontSize: 24, color: premium1, fontWeight: FontWeight.bold);
+
+        TextStyle premiumone= GoogleFonts.poppins(
+    fontSize: 24, color: premium2, fontWeight: FontWeight.bold);
+
+        TextStyle premiumtwo= GoogleFonts.poppins(
+    fontSize: 24, color: premium3, fontWeight: FontWeight.bold);
+
+        TextStyle premiumtri= GoogleFonts.poppins(
+    fontSize: 24, color: premium4, fontWeight: FontWeight.bold);

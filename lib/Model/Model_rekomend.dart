@@ -28,7 +28,7 @@ class ModelRekomend extends StatelessWidget {
                 height: 60,
                 width: 60,
               ),
-              SizedBox(
+             const SizedBox(
                 width: 4,
               ),
               Text(

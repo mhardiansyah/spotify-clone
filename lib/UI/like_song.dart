@@ -28,7 +28,7 @@ class _LikeSongState extends State<LikeSong> {
               color: white,
             ),
           ),
-          SizedBox(
+         const SizedBox(
             height: 22,
           ),
           Row(
@@ -110,8 +110,7 @@ class _LikeSongState extends State<LikeSong> {
                     height: 56,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color:
-                          second, // Gantilah ini dengan warna sesuai tema Anda
+                      color: second,
                     ),
                     child: Stack(
                       alignment: Alignment.center,
@@ -171,63 +170,63 @@ class _LikeSongState extends State<LikeSong> {
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong3.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'We Cry Together',
+                  desc: 'Kendrick Lamar, Taylour Paige',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong4.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Wheres My Love',
+                  desc: 'SYML',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong5.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Kwaku the Traveller',
+                  desc: 'Black Sherif',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong6.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: '7 Minutes',
+                  desc: 'Dean Lewis',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong7.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Silence',
+                  desc: 'Marshmello, Khalid',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong8.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Bong Bing',
+                  desc: 'Laa Lee, Cristale',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong9.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Hayya Hayya (Better Together)...',
+                  desc: 'Trinidad Cardona, Davido, Aisha',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong10.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'He Lives in You',
+                  desc: 'Diana Ross',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong11.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Runnin (Lose It All)',
+                  desc: 'Naughty Boy, Beyoncé, Arow Be...',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong12.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Way Less Sad',
+                  desc: 'AJR',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong13.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Man Down',
+                  desc: 'Rihanna',
                   icon_download: 'assets/Downloaded3.png'),
               ModelLikesSonds(
                   image_lagu: 'assets/image/likeSong14.png',
-                  nama_lagu: 'Pretty Girl - Cheat Codes X CADE ...',
-                  desc: 'Maggie Lindermann, Cheat Cod...',
+                  nama_lagu: 'Wait a Minute!',
+                  desc: 'WILLOW',
                   icon_download: 'assets/Downloaded3.png'),
             ],
           ),

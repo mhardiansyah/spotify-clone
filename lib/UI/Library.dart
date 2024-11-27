@@ -119,7 +119,7 @@ class _LibraryState extends State<Library> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
+       const SizedBox(
           height: 180,
         ),
         Row(
@@ -129,18 +129,18 @@ class _LibraryState extends State<Library> {
               size: 15,
               color: white,
             ),
-            SizedBox(
+           const SizedBox(
               width: 14,
             ),
             Text(
               'Most recent',
               style: sub_Library2,
             ),
-            Spacer(),
+           const Spacer(),
             Icon(Icons.list, size: 15, color: white),
           ],
         ),
-        SizedBox(
+       const SizedBox(
           height: 15,
         ),
         Container(
@@ -227,7 +227,7 @@ class _LibraryState extends State<Library> {
           ListView(
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 16, left: 16),
+                padding:const EdgeInsets.only(right: 16, left: 16),
                 child: Column(
                   children: [body()],
                 ),

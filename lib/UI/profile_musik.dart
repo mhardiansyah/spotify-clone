@@ -41,7 +41,7 @@ class _profileState extends State<profile> {
             Text('Liked', style: mainJudul),
           ],
         ),
-        SizedBox(height: 32),
+       const SizedBox(height: 32),
         Row(
           children: [
             Image.asset(
@@ -53,7 +53,7 @@ class _profileState extends State<profile> {
             Text('Add to Playlist', style: mainJudul),
           ],
         ),
-        SizedBox(height: 32),
+       const SizedBox(height: 32),
         Row(
           children: [
             Image.asset(
@@ -65,7 +65,7 @@ class _profileState extends State<profile> {
             Text('Add to Queue', style: mainJudul),
           ],
         ),
-        SizedBox(height: 32),
+       const SizedBox(height: 32),
         Row(
           children: [
             Image.asset(
@@ -77,7 +77,7 @@ class _profileState extends State<profile> {
             Text('View Album', style: mainJudul),
           ],
         ),
-        SizedBox(height: 32),
+       const SizedBox(height: 32),
         Row(
           children: [
             Image.asset(
@@ -89,7 +89,7 @@ class _profileState extends State<profile> {
             Text('View Artists', style: mainJudul),
           ],
         ),
-        SizedBox(height: 32),
+       const SizedBox(height: 32),
         Row(
           children: [
             Image.asset(
@@ -101,7 +101,7 @@ class _profileState extends State<profile> {
             Text('Share', style: mainJudul),
           ],
         ),
-        SizedBox(height: 32),
+       const SizedBox(height: 32),
         Row(
           children: [
             Image.asset(
@@ -113,7 +113,7 @@ class _profileState extends State<profile> {
             Text('Go to Song Radio', style: mainJudul),
           ],
         ),
-        SizedBox(height: 32),
+       const SizedBox(height: 32),
         Row(
           children: [
             Image.asset(

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:spotify/Themes/colors2.dart';
+import 'package:spotify/Themes/colors.dart';
 
 class Premium extends StatelessWidget {
   const Premium({super.key});
@@ -28,7 +28,7 @@ class Premium extends StatelessWidget {
                   style: mainJudul,
                 )
               ]),
-              SizedBox(height: 120),
+            const  SizedBox(height: 120),
               Container(
                 width: 380,
                 height: 40,
@@ -41,8 +41,9 @@ class Premium extends StatelessWidget {
                       style: btnlogin2,
                     )),
               ),
-              SizedBox(height: 55),
+            const  SizedBox(height: 55),
               Container(
+                  margin: const EdgeInsets.only(bottom: 34),
                   padding:
                       EdgeInsets.only(top: 15, bottom: 30, left: 17, right: 17),
                   width: 380,
@@ -64,34 +65,31 @@ class Premium extends StatelessWidget {
                         thickness: 2,
                         color: Colors.black,
                       )),
-                      SizedBox(height: 5),
+                    const  SizedBox(height: 5),
                       Text(
                         'Mendengarkan musik bebas iklan',
                         style: detail,
                       ),
-                      SizedBox(height: 11),
-                      Text('Download untuk mendengarkan offline'),
-                      SizedBox(height: 11),
-                      Text('Putar lagu dalam urutan apa pun'),
-                      SizedBox(height: 11),
-                      Text('Kualifikasi Audio tinggi'),
-                      SizedBox(height: 11),
-                      Text('Mendengarkan bersama teman secara real time'),
-                      SizedBox(height: 11),
-                      Text('Mengelola antrean lagu'),
+                     const SizedBox(height: 11),
+                     const Text('Download untuk mendengarkan offline'),
+                     const SizedBox(height: 11),
+                     const Text('Putar lagu dalam urutan apa pun'),
+                     const SizedBox(height: 11),
+                     const Text('Kualifikasi Audio tinggi'),
+                     const SizedBox(height: 11),
+                     const Text('Mendengarkan bersama teman secara real time'),
+                     const Text('Mengelola antrean lagu'),
                     ],
                   )),
-              SizedBox(
-                height: 34,
-              ),
               Text(
                 'Paket yang tersedia',
                 style: numlagu,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 11,
               ),
               Container(
+                  margin: const EdgeInsets.only(bottom: 67),
                   padding:
                       EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
                   width: 380,
@@ -110,224 +108,21 @@ class Premium extends StatelessWidget {
                             width: 25,
                             height: 25,
                           ),
-                          SizedBox(
+                         const SizedBox(
                             width: 5,
                           ),
                           Text(
                             'Premium',
-                            style: pilihan,
+                            style: pilihan2,
                           ),
                         ],
                       ),
-                      SizedBox(
+                     const SizedBox(
                         height: 22,
                       ),
                       Text(
                         'mini',
                         style: premium,
-                      ),
-                      SizedBox(height: 22),
-                      Text(
-                        'Rp.10.999 selama 1 minggu',
-                        style: numlagu,
-                      ),
-                      SizedBox(
-                        height: 3,
-                      ),
-                      Expanded(
-                          child: Divider(
-                        height: 25,
-                        thickness: 2,
-                        color: Colors.black,
-                      )),
-                      SizedBox(height: 5),
-                      Text(
-                        'Mendengarkan musik bebas iklan',
-                        style: detail,
-                      ),
-                      SizedBox(height: 11),
-                      Text('Download untuk mendengarkan offline'),
-                      SizedBox(height: 11),
-                      Text('Putar lagu dalam urutan apa pun'),
-                      SizedBox(height: 11),
-                      Text('Kualifikasi Audio tinggi'),
-                      SizedBox(height: 11),
-                      Text('Mendengarkan bersama teman secara real time'),
-                      SizedBox(height: 11),
-                      Text('Mengelola antrean lagu'),
-                    ],
-                  )),
-             const SizedBox(
-                height: 67,
-              ),
-              Container(
-                  padding:
-                      EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
-                  width: 380,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: whiteabu,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset(
-                            'assets/Logo.png',
-                            width: 25,
-                            height: 25,
-                          ),
-                        const  SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            'Premium',
-                            style: pilihan,
-                          ),
-                        ],
-                      ),
-                     const SizedBox(
-                        height: 22,
-                      ),
-                      Text(
-                        'Individal',
-                        style: premiumone,
-                      ),
-                    const  SizedBox(height: 22),
-                      Text(
-                        'Rp.10.999 selama 1 minggu',
-                        style: numlagu,
-                      ),
-                     const SizedBox(
-                        height: 3,
-                      ),
-                      Expanded(
-                          child: Divider(
-                        height: 25,
-                        thickness: 2,
-                        color: Colors.black,
-                      )),
-                     const SizedBox(height: 5),
-                      Text(
-                        'Mendengarkan musik bebas iklan',
-                        style: detail,
-                      ),
-                     const SizedBox(height: 11),
-                    const  Text('Download untuk mendengarkan offline'),
-                    const  SizedBox(height: 11),
-                     const Text('Putar lagu dalam urutan apa pun'),
-                     const SizedBox(height: 11),
-                    const  Text('Kualifikasi Audio tinggi'),
-                    const  SizedBox(height: 11),
-                    const  Text('Mendengarkan bersama teman secara real time'),
-                     const SizedBox(height: 11),
-                     const Text('Mengelola antrean lagu'),
-                    ],
-                  )),
-              SizedBox(height: 67),
-              Container(
-                  padding:
-                    const  EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
-                  width: 380,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: whiteabu,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset(
-                            'assets/Logo.png',
-                            width: 25,
-                            height: 25,
-                          ),
-                        const  SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            'Premium',
-                            style: pilihan,
-                          ),
-                        ],
-                      ),
-                    const  SizedBox(
-                        height: 22,
-                      ),
-                      Text(
-                        'Family',
-                        style: premiumtwo,
-                      ),
-                    const  SizedBox(height: 22),
-                      Text(
-                        'Rp.10.999 selama 1 minggu',
-                        style: numlagu,
-                      ),
-                     const SizedBox(
-                        height: 3,
-                      ),
-                      Expanded(
-                          child: Divider(
-                        height: 25,
-                        thickness: 2,
-                        color: Colors.black,
-                      )),
-                     const SizedBox(height: 5),
-                      Text(
-                        'Mendengarkan musik bebas iklan',
-                        style: detail,
-                      ),
-                      SizedBox(height: 11),
-                      Text('Download untuk mendengarkan offline'),
-                      SizedBox(height: 11),
-                      Text('Putar lagu dalam urutan apa pun'),
-                      SizedBox(height: 11),
-                      Text('Kualifikasi Audio tinggi'),
-                      SizedBox(height: 11),
-                      Text('Mendengarkan bersama teman secara real time'),
-                      SizedBox(height: 11),
-                      Text('Mengelola antrean lagu'),
-                    ],
-                  )),
-              SizedBox(height: 67),
-              Container(
-                  padding:
-                    const  EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
-                  width: 380,
-                  height: 400,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: whiteabu,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Image.asset(
-                            'assets/Logo.png',
-                            width: 25,
-                            height: 25,
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            'Premium',
-                            style: pilihan,
-                          ),
-                        ],
-                      ),
-                    const  SizedBox(
-                        height: 22,
-                      ),
-                      Text(
-                        'Student',
-                        style: premiumtri,
                       ),
                      const SizedBox(height: 22),
                       Text(
@@ -343,21 +138,222 @@ class Premium extends StatelessWidget {
                         thickness: 2,
                         color: Colors.black,
                       )),
+                     const SizedBox(height: 5),
+                      Text(
+                        'Mendengarkan musik bebas iklan',
+                        style: detail,
+                      ),
+                     const SizedBox(height: 11),
+                     const Text('Download untuk mendengarkan offline'),
+                     const SizedBox(height: 11),
+                     const Text('Putar lagu dalam urutan apa pun'),
+                     const SizedBox(height: 11),
+                     const Text('Kualifikasi Audio tinggi'),
+                     const SizedBox(height: 11),
+                     const Text('Mendengarkan bersama teman secara real time'),
+                     const SizedBox(height: 11),
+                     const Text('Mengelola antrean lagu'),
+                    ],
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(bottom: 67),
+                  padding:
+                      EdgeInsets.only(top: 15, bottom: 23, left: 17, right: 17),
+                  width: 380,
+                  height: 400,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: whiteabu,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset(
+                            'assets/Logo.png',
+                            width: 25,
+                            height: 25,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            'Premium',
+                            style: pilihan2,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 22,
+                      ),
+                      Text(
+                        'Individal',
+                        style: premiumone,
+                      ),
+                      const SizedBox(height: 22),
+                      Text(
+                        'Rp.10.999 selama 1 minggu',
+                        style: numlagu,
+                      ),
+                      const SizedBox(
+                        height: 3,
+                      ),
+                      Expanded(
+                          child: Divider(
+                        height: 25,
+                        thickness: 2,
+                        color: Colors.black,
+                      )),
+                      const SizedBox(height: 5),
+                      Text(
+                        'Mendengarkan musik bebas iklan',
+                        style: detail,
+                      ),
+                      const SizedBox(height: 11),
+                      const Text('Download untuk mendengarkan offline'),
+                      const SizedBox(height: 11),
+                      const Text('Putar lagu dalam urutan apa pun'),
+                      const SizedBox(height: 11),
+                      const Text('Kualifikasi Audio tinggi'),
+                      const SizedBox(height: 11),
+                      const Text('Mendengarkan bersama teman secara real time'),
+                      const SizedBox(height: 11),
+                      const Text('Mengelola antrean lagu'),
+                    ],
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(bottom: 67),
+                  padding: const EdgeInsets.only(
+                      top: 15, bottom: 23, left: 17, right: 17),
+                  width: 380,
+                  height: 400,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: whiteabu,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset(
+                            'assets/Logo.png',
+                            width: 25,
+                            height: 25,
+                          ),
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            'Premium',
+                            style: pilihan2,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 22,
+                      ),
+                      Text(
+                        'Family',
+                        style: premiumtwo,
+                      ),
+                      const SizedBox(height: 22),
+                      Text(
+                        'Rp.10.999 selama 1 minggu',
+                        style: numlagu,
+                      ),
+                      const SizedBox(
+                        height: 3,
+                      ),
+                      Expanded(
+                          child: Divider(
+                        height: 25,
+                        thickness: 2,
+                        color: Colors.black,
+                      )),
+                      const SizedBox(height: 5),
+                      Text(
+                        'Mendengarkan musik bebas iklan',
+                        style: detail,
+                      ),
+                     const SizedBox(height: 11),
+                     const Text('Download untuk mendengarkan offline'),
+                     const SizedBox(height: 11),
+                     const Text('Putar lagu dalam urutan apa pun'),
+                     const SizedBox(height: 11),
+                     const Text('Kualifikasi Audio tinggi'),
+                     const SizedBox(height: 11),
+                     const Text('Mendengarkan bersama teman secara real time'),
+                     const SizedBox(height: 11),
+                     const Text('Mengelola antrean lagu'),
+                    ],
+                  )),
+              Container(
+                  margin: const EdgeInsets.only(bottom: 40),
+                  padding: const EdgeInsets.only(
+                      top: 15, bottom: 23, left: 17, right: 17),
+                  width: 380,
+                  height: 400,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: whiteabu,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset(
+                            'assets/Logo.png',
+                            width: 25,
+                            height: 25,
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            'Premium',
+                            style: pilihan2,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 22,
+                      ),
+                      Text(
+                        'Student',
+                        style: premiumtri,
+                      ),
+                      const SizedBox(height: 22),
+                      Text(
+                        'Rp.10.999 selama 1 minggu',
+                        style: numlagu,
+                      ),
+                      const SizedBox(
+                        height: 3,
+                      ),
+                      Expanded(
+                          child: Divider(
+                        height: 25,
+                        thickness: 2,
+                        color: Colors.black,
+                      )),
                       SizedBox(height: 5),
                       Text(
                         'Mendengarkan musik bebas iklan',
                         style: detail,
                       ),
-                      SizedBox(height: 11),
-                      Text('Download untuk mendengarkan offline'),
-                      SizedBox(height: 11),
-                      Text('Putar lagu dalam urutan apa pun'),
-                      SizedBox(height: 11),
-                      Text('Kualifikasi Audio tinggi'),
-                      SizedBox(height: 11),
-                      Text('Mendengarkan bersama teman secara real time'),
-                      SizedBox(height: 11),
-                      Text('Mengelola antrean lagu'),
+                     const SizedBox(height: 11),
+                     const Text('Download untuk mendengarkan offline'),
+                     const SizedBox(height: 11),
+                     const Text('Putar lagu dalam urutan apa pun'),
+                     const SizedBox(height: 11),
+                     const Text('Kualifikasi Audio tinggi'),
+                     const SizedBox(height: 11),
+                     const Text('Mendengarkan bersama teman secara real time'),
+                     const SizedBox(height: 11),
+                     const Text('Mengelola antrean lagu'),
                     ],
                   )),
             ],

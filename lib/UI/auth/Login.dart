@@ -11,7 +11,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       backgroundColor: primaryColor,
       body: Padding(
-        padding: EdgeInsets.only(
+        padding:const EdgeInsets.only(
           right: 17,
           left: 17,
           top: 70,
@@ -24,7 +24,7 @@ class Login extends StatelessWidget {
                 width: 86,
                 height: 89,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 31,
               ),
               Text(
@@ -32,7 +32,7 @@ class Login extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: judullogin,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 45,
               ),
               Column(
@@ -40,7 +40,7 @@ class Login extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      SizedBox(
+                     const SizedBox(
                         width: 13,
                       ),
                       Text(
@@ -49,14 +49,14 @@ class Login extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                 const SizedBox(
                     height: 11,
                   ),
                   Container(
                     width: 380,
                     height: 68,
-                    margin: EdgeInsets.only(bottom: 28),
-                    padding: EdgeInsets.only(
+                    margin:const EdgeInsets.only(bottom: 28),
+                    padding:const EdgeInsets.only(
                       left: 26,
                       top: 15,
                       bottom: 15,
@@ -79,7 +79,7 @@ class Login extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      SizedBox(
+                    const  SizedBox(
                         width: 13,
                       ),
                       Text(
@@ -88,14 +88,14 @@ class Login extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                 const SizedBox(
                     height: 11,
                   ),
                   Container(
                     width: 380,
                     height: 68,
-                    margin: EdgeInsets.only(bottom: 28),
-                    padding: EdgeInsets.only(
+                    margin: const EdgeInsets.only(bottom: 28),
+                    padding:const EdgeInsets.only(
                       left: 26,
                       top: 15,
                       bottom: 15,

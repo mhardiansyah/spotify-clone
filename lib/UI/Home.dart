@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 100),
+        const SizedBox(height: 100),
         Container(
           margin: const EdgeInsets.only(bottom: 40),
           child: GridView.count(
@@ -118,7 +118,7 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-        SizedBox(height: 18),
+        const SizedBox(height: 18),
         Container(
           margin: const EdgeInsets.only(bottom: 45),
           width: 380,
@@ -163,7 +163,7 @@ class _HomeState extends State<Home> {
                             size: 24,
                             color: isFavorite ? second : white,
                           ),
-                          SizedBox(width: 138),
+                          const SizedBox(width: 138),
                           CircleAvatar(
                             radius: 15,
                             child: Icon(Icons.play_arrow,
@@ -189,32 +189,32 @@ class _HomeState extends State<Home> {
                   name:
                       'Your weekly mixtape of fresh\nmusic. Enjoy new music and d...',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/laguhome1.png',
                   name: 'rumah ke rumah',
                   desc: 'Single Hindia'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/laguhome2.png',
                   name: 'Numb Little Bug',
                   desc: 'Single Em Beihold'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/laguhome3.png',
                   name: 'Evering Road (Deluxe)',
                   desc: 'Album Tom Grennan'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/laguhome2.png',
                   name: 'Numb Little Bug',
                   desc: 'Single Em Beihold'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/laguhome3.png',
                   name: 'Nabi palsu',
                   desc: 'Single   Hindia'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
             ],
           ),
         ),
@@ -320,27 +320,27 @@ class _HomeState extends State<Home> {
                   imagehome: 'assets/image/mix1.png',
                   name: 'Dean Lewis, Lord Huron, Sia and\nmore',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/mix2.png',
                   name: 'Ed Sheeran, Marshmellow, Tall\nHeights and more',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/mix3.png',
                   name: 'Imagine Dragons, Rihanna,\nJustin Bieber and more',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/mix2.png',
                   name: 'Ed Sheeran, Marshmellow, Tall\nHeights and more',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/mix3.png',
                   name: 'Imagine Dragons, Rihanna,\nJustin Bieber and more',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
             ],
           ),
         ),
@@ -353,7 +353,7 @@ class _HomeState extends State<Home> {
               radius: 20,
               child: Image.asset('assets/image/Pic.png'),
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             Column(
@@ -413,7 +413,7 @@ class _HomeState extends State<Home> {
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Text('Uniquely yours', style: judul),
@@ -440,26 +440,26 @@ class _HomeState extends State<Home> {
                   imagehome: 'assets/image/Uniquely1.png',
                   name: 'Your past favorites',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/Uniquely2.png',
                   name:
                       'We made you a personalized\nplaylist with songs to take you ...',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/Uniquely1.png',
                   name: 'Your past favorites',
                   desc: ''),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
             ],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Text('Jump back in', style: judul),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         SingleChildScrollView(
@@ -471,27 +471,27 @@ class _HomeState extends State<Home> {
                   imagehome: 'assets/image/back1.png',
                   name: 'Hurry up, We’re Dreaming',
                   desc: 'Album . M83'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/back2.png',
                   name: 'Chapters',
                   desc: 'Album . James TW'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/back3.png',
                   name: 'Jess',
                   desc: 'Playlist . Jhesy'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/back2.png',
                   name: 'Chapters',
                   desc: 'Album . James TW'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/back3.png',
                   name: 'Jess',
                   desc: 'Playlist . Jhesy'),
-              SizedBox(width: 17),
+              const SizedBox(width: 17),
             ],
           ),
         ),
@@ -525,7 +525,7 @@ class _HomeState extends State<Home> {
             )),
           ),
           Padding(
-            padding: EdgeInsets.only(right: 17, left: 17),
+            padding: const EdgeInsets.only(right: 17, left: 17),
             child: ListView(
               children: [
                 body(),

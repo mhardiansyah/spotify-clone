@@ -38,7 +38,7 @@ class _ScreenlaguState extends State<Screenlagu> {
                     color: white,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 92,
                 ),
                 Column(
@@ -54,7 +54,7 @@ class _ScreenlaguState extends State<Screenlagu> {
                     ),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Icon(
                   Icons.more_vert_outlined,
                   size: 19,
@@ -62,11 +62,11 @@ class _ScreenlaguState extends State<Screenlagu> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 112,
             ),
             Container(
-              margin: EdgeInsets.only(bottom: 50),
+              margin: const EdgeInsets.only(bottom: 50),
               width: 364,
               height: 364,
               child: Image.asset(
@@ -99,7 +99,7 @@ class _ScreenlaguState extends State<Screenlagu> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Nabi Palsu',
+                    'Rumah ke rumah',
                     style: sublagu,
                   ),
                   Text(
@@ -108,7 +108,7 @@ class _ScreenlaguState extends State<Screenlagu> {
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               Icon(
                 isFavorite
                     ? Icons.favorite_rounded
@@ -118,7 +118,7 @@ class _ScreenlaguState extends State<Screenlagu> {
               )
             ],
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SliderTheme(
             data: SliderTheme.of(context).copyWith(
               trackHeight: 4,
@@ -148,7 +148,7 @@ class _ScreenlaguState extends State<Screenlagu> {
               ),
             ],
           ),
-          SizedBox(height: 21),
+          const SizedBox(height: 21),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -171,14 +171,14 @@ class _ScreenlaguState extends State<Screenlagu> {
               Icon(Icons.repeat, size: 24, color: white),
             ],
           ),
-          SizedBox(height: 28),
+          const SizedBox(height: 28),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Icon(Icons.devices, size: 24, color: white),
-              Spacer(),
+              const Spacer(),
               Icon(Icons.share_rounded, size: 24, color: white),
-              SizedBox(width: 38),
+              const SizedBox(width: 38),
               Icon(Icons.queue_music_rounded, size: 24, color: white),
             ],
           ),

@@ -16,7 +16,7 @@ class _onboardState extends State<onboard> {
     return Scaffold(
       backgroundColor: primaryColor,
       body: Padding(
-        padding: EdgeInsets.only(right: 17, left: 17, top: 70),
+        padding:const EdgeInsets.only(right: 17, left: 17, top: 70),
         child: Center(
           child: Column(
             children: [
@@ -33,11 +33,11 @@ class _onboardState extends State<onboard> {
                 textAlign: TextAlign.center,
                 style: judullogin,
               ),
-              SizedBox(
+             const SizedBox(
                 height: 45,
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 20),
+                margin:const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
@@ -62,19 +62,19 @@ class _onboardState extends State<onboard> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 20),
+                margin:const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
                     border: Border.all(color: white)),
                 child: Container(
-                  padding: EdgeInsets.only(left: 14, top: 16, bottom: 17),
+                  padding:const EdgeInsets.only(left: 14, top: 16, bottom: 17),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset('assets/google.png'),
-                      SizedBox(
+                     const SizedBox(
                         width: 33,
                       ),
                       Text(
@@ -86,19 +86,19 @@ class _onboardState extends State<onboard> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 20),
+                margin:const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
                     border: Border.all(color: white)),
                 child: Container(
-                  padding: EdgeInsets.only(left: 14, top: 16, bottom: 17),
+                  padding:const EdgeInsets.only(left: 14, top: 16, bottom: 17),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset('assets/fb.png'),
-                      SizedBox(
+                     const SizedBox(
                         width: 33,
                       ),
                       Text(
@@ -110,19 +110,19 @@ class _onboardState extends State<onboard> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 20),
+                margin:const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
                     border: Border.all(color: white)),
                 child: Container(
-                  padding: EdgeInsets.only(left: 14, top: 16, bottom: 17),
+                  padding: const EdgeInsets.only(left: 14, top: 16, bottom: 17),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset('assets/x.png'),
-                      SizedBox(
+                     const SizedBox(
                         width: 54,
                       ),
                       Text(

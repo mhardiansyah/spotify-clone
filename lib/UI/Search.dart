@@ -82,12 +82,12 @@ class _SearchState extends State<Search> {
       child: Container(
         height: 180,
         color: primaryColor,
-        padding: EdgeInsets.only(left: 17, right: 17, top: 70),
+        padding:const EdgeInsets.only(left: 17, right: 17, top: 70),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Search', style: judul),
-            SizedBox(height: 23),
+           const SizedBox(height: 23),
             TextField(
               onChanged: (value) => upadateList(value),
               decoration: InputDecoration(
@@ -114,7 +114,7 @@ class _SearchState extends State<Search> {
             Text('Your top genres', style: mainJudul),
             SizedBox(height: 11),
             Container(
-              margin: EdgeInsets.only(bottom: 26),
+              margin:const EdgeInsets.only(bottom: 26),
               child: GridView.count(
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,
@@ -131,9 +131,9 @@ class _SearchState extends State<Search> {
               ),
             ),
             Text('Browse all', style: mainJudul),
-            SizedBox(height: 11),
+           const SizedBox(height: 11),
             Container(
-              margin: EdgeInsets.only(bottom: 26),
+              margin:const EdgeInsets.only(bottom: 26),
               child: GridView.count(
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,

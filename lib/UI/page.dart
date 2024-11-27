@@ -7,6 +7,7 @@ import 'package:spotify/UI/Home.dart';
 import 'package:spotify/UI/Library.dart';
 import 'package:spotify/UI/Premium.dart';
 import 'package:spotify/UI/Search.dart';
+import 'package:spotify/UI/like_song.dart';
 
 class page extends StatefulWidget {
   const page({super.key});
@@ -30,6 +31,7 @@ class _pagetState extends State<page> {
     Center(
       child: Premium(),
     ),
+    
   ];
   void _onTapTapp(int index) {
     setState(() {
