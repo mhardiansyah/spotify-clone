@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:spotify/Themes/colors.dart';
 
 class Screenlagu extends StatefulWidget {
@@ -10,13 +11,40 @@ class Screenlagu extends StatefulWidget {
 }
 
 class _ScreenlaguState extends State<Screenlagu> {
+  final AudioPlayer _audio_player = AudioPlayer();
   bool isFavorite = false;
   bool isPlay = false;
 
-  void _togglePlay() {
+  void _togglePlay() async {
     setState(() {
       isPlay = !isPlay; // Ubah status play/pause
     });
+
+    if (isPlay) {
+      await _audio_player.play();
+    } else {
+      await _audio_player.pause();
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _initaudio_player();
+  }
+
+  Future<void> _initaudio_player() async {
+    try {
+      await _audio_player.setAsset('assets/audio/test.mp3');
+    } catch (e) {
+      print('ada kesalahan');
+    }
+  }
+
+  @override
+  void dipose() {
+    _audio_player.dispose();
+    super.dispose();
   }
 
   Widget header() {
@@ -120,30 +148,36 @@ class _ScreenlaguState extends State<Screenlagu> {
           ),
           const SizedBox(height: 20),
           SliderTheme(
-            data: SliderTheme.of(context).copyWith(
-              trackHeight: 4,
-            ),
-            child: Slider(
-              value: 0.0,
-              min: 0.0,
-              max: 180.0,
-              activeColor: white,
-              inactiveColor: whiteabu,
-              onChanged: (value) {
-                // Fungsi untuk mengubah posisi slider (placeholder)
-                setState(() {});
-              },
-            ),
-          ),
+              data: SliderTheme.of(context).copyWith(trackHeight: 4),
+              child: StreamBuilder<Duration>(
+                  stream: _audio_player.positionStream,
+                  builder: (context, snapshot) {
+                    final position = snapshot.data ?? Duration.zero;
+                    final duration = _audio_player.duration ?? Duration.zero;
+
+                    return Slider(
+                      value: position.inSeconds.toDouble(),
+                      min: 0.0,
+                      max: duration.inSeconds.toDouble(),
+                      activeColor: white,
+                      inactiveColor: whiteabu,
+                      onChanged: (value) async {
+                        await _audio_player
+                            .seek(Duration(seconds: value.toInt()));
+                      },
+                    );
+                  })),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                '0:00',
+                _audio_player.position.toString().split('.')[0],
                 style: GoogleFonts.poppins(fontSize: 12, color: white),
               ),
               Text(
-                '3:00',
+                (_audio_player.duration ?? Duration.zero)
+                    .toString()
+                    .split('.')[0],
                 style: GoogleFonts.poppins(fontSize: 12, color: white),
               ),
             ],
