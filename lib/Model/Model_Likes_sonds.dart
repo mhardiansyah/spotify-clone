@@ -59,11 +59,11 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    if (widget.icon_download != null &&
-                        widget.icon_download!.isNotEmpty)
-                      Image.asset(
-                        widget.icon_download,
-                      ),
+                    // if (widget.icon_download != null &&
+                    //     widget.icon_download!.isNotEmpty)
+                    Image.asset(
+                      widget.icon_download,
+                    ),
                     const SizedBox(
                       width: 4,
                     ),
@@ -118,7 +118,144 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
             GestureDetector(
               onTap: () {
                 showModalBottomSheet(
-                    context: context, builder: (context) => moreDialog());
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      height: 502,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: primaryColor,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            topRight: Radius.circular(10)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                                right: 19, left: 19, top: 20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ModelMoreDialog(
+                                    image_lagu_more: widget.image_lagu,
+                                    nama_lagu_more: widget.nama_lagu,
+                                    desc_more: widget.desc,
+                                    icon_download_more: widget.icon_download),
+                              ],
+                            ),
+                          ),
+                          Divider(
+                            height: 25,
+                            thickness: 2,
+                            color: whiteabu,
+                            endIndent: 0,
+                            indent: 0,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              right: 19,
+                              left: 19,
+                              top: 15,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons
+                                          .queue_music, // Ikon untuk "Add to Playlist"
+                                      size: 22,
+                                      color: white,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text('Add to Playlist', style: mainJudul),
+                                  ],
+                                ),
+                                const SizedBox(height: 22),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.queue, // Ikon untuk "Add to Queue"
+                                      size: 22,
+                                      color: white,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text('Add to Queue', style: mainJudul),
+                                  ],
+                                ),
+                                const SizedBox(height: 22),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.album, // Ikon untuk "View Album"
+                                      size: 22,
+                                      color: white,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text('View Album', style: mainJudul),
+                                  ],
+                                ),
+                                const SizedBox(height: 22),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.person, // Ikon untuk "View Artists"
+                                      size: 22,
+                                      color: white,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text('View Artists', style: mainJudul),
+                                  ],
+                                ),
+                                const SizedBox(height: 22),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.share, // Ikon untuk "Share"
+                                      size: 22,
+                                      color: white,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text('Share', style: mainJudul),
+                                  ],
+                                ),
+                                const SizedBox(height: 22),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons
+                                          .radio, // Ikon untuk "Go to Song Radio"
+                                      size: 22,
+                                      color: white,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text('Go to Song Radio', style: mainJudul),
+                                  ],
+                                ),
+                                const SizedBox(height: 22),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons
+                                          .info_outline, // Ikon untuk "Show Credits"
+                                      size: 22,
+                                      color: white,
+                                    ),
+                                    SizedBox(width: 8),
+                                    Text('Show Credits', style: mainJudul),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                );
               },
               child: Icon(
                 Icons.more_vert,
@@ -133,139 +270,3 @@ class _ModelLikesSondsState extends State<ModelLikesSonds> {
   }
 }
 
-class moreDialog extends StatelessWidget {
-  const moreDialog({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 502,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: primaryColor,
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 19, left: 19, top: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ModelMoreDialog(
-                    image_lagu_more: 'assets/image/likeSong2.png',
-                    nama_lagu_more: 'Pretty Girl - Cheat Codes X CADE ...',
-                    desc_more: 'Maggie Lindermann, Cheat Cod...',
-                    icon_download_more: 'assets/Downloaded3.png'),
-              ],
-            ),
-          ),
-          Divider(
-            height: 25,
-            thickness: 2,
-            color: whiteabu,
-            endIndent: 0,
-            indent: 0,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              right: 19,
-              left: 19,
-              top: 15,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.queue_music, // Ikon untuk "Add to Playlist"
-                      size: 22,
-                      color: white,
-                    ),
-                    SizedBox(width: 8),
-                    Text('Add to Playlist', style: mainJudul),
-                  ],
-                ),
-                const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.queue, // Ikon untuk "Add to Queue"
-                      size: 22,
-                      color: white,
-                    ),
-                    SizedBox(width: 8),
-                    Text('Add to Queue', style: mainJudul),
-                  ],
-                ),
-                const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.album, // Ikon untuk "View Album"
-                      size: 22,
-                      color: white,
-                    ),
-                    SizedBox(width: 8),
-                    Text('View Album', style: mainJudul),
-                  ],
-                ),
-                const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.person, // Ikon untuk "View Artists"
-                      size: 22,
-                      color: white,
-                    ),
-                    SizedBox(width: 8),
-                    Text('View Artists', style: mainJudul),
-                  ],
-                ),
-                const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.share, // Ikon untuk "Share"
-                      size: 22,
-                      color: white,
-                    ),
-                    SizedBox(width: 8),
-                    Text('Share', style: mainJudul),
-                  ],
-                ),
-                const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.radio, // Ikon untuk "Go to Song Radio"
-                      size: 22,
-                      color: white,
-                    ),
-                    SizedBox(width: 8),
-                    Text('Go to Song Radio', style: mainJudul),
-                  ],
-                ),
-                const SizedBox(height: 22),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.info_outline, // Ikon untuk "Show Credits"
-                      size: 22,
-                      color: white,
-                    ),
-                    SizedBox(width: 8),
-                    Text('Show Credits', style: mainJudul),
-                  ],
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
