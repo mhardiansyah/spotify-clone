@@ -35,7 +35,7 @@ class _ScreenlaguState extends State<Screenlagu> {
 
   Future<void> _initaudio_player() async {
     try {
-      await _audio_player.setAsset('assets/audio/test.mp3');
+      await _audio_player.setAsset('assets/audio/b.arab.mp3');
     } catch (e) {
       print('ada kesalahan');
     }

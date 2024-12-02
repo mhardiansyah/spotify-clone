@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spotify/Themes/colors.dart';
@@ -10,15 +9,16 @@ class ModelMoreDialog extends StatelessWidget {
   final String desc_more;
   final String icon_download_more;
 
-  const ModelMoreDialog({super.key, required this.image_lagu_more, required this.nama_lagu_more, required this.desc_more, required this.icon_download_more});
-
-  
-  
+  const ModelMoreDialog(
+      {super.key,
+      required this.image_lagu_more,
+      required this.nama_lagu_more,
+      required this.desc_more,
+      required this.icon_download_more});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 17),
       width: 376,
       height: 52,
       child: GestureDetector(
@@ -95,9 +95,6 @@ class ModelMoreDialog extends StatelessWidget {
               ],
             ),
             const Spacer(),
-           
-            
-            
           ],
         ),
       ),
