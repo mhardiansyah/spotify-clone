@@ -4,7 +4,7 @@ import 'package:spotify/Themes/temalibary.dart';
 import 'package:spotify/UI/like_song.dart';
 
 class ModelLibary extends StatelessWidget {
-   final String  imagelibary;
+  final String imagelibary;
   final String namalibary;
   final String? pemilik;
 
@@ -25,11 +25,7 @@ class ModelLibary extends StatelessWidget {
 
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => LikeSong(),
-            ));
+        Navigator.of(context).push(_dillvose());
       },
       child: Container(
         width: 184,
@@ -58,4 +54,15 @@ class ModelLibary extends StatelessWidget {
       ),
     );
   }
+}
+
+Route _dillvose() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, seconds) => LikeSong(),
+      transitionsBuilder: (context, animation, seconds, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      });
 }

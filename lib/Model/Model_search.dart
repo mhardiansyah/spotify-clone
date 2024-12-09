@@ -16,14 +16,17 @@ class modelsearch extends StatelessWidget {
     required this.desc,
   });
 
+  factory modelsearch.fromJson(Map<String, dynamic> json) {
+    return modelsearch(
+      image: json['image'],
+      namalagu: json['namalagu'],
+      desc: json['desc'],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    TextStyle containerstyle;
-    if (namalagu == 'Liked Songs') {
-      containerstyle = judul_lagu;
-    } else {
-      containerstyle = judul_lagu2;
-    }
+    final TextStyle nama = namalagu == 'Liked Songs' ? judul_lagu : judul_lagu2;
     return Container(
       margin: const EdgeInsets.only(bottom: 17),
       width: 377,

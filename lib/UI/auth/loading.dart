@@ -16,12 +16,8 @@ class _LoadingState extends State<Loading> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 2), () {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => page(),
-          ));
+    Future.delayed(Duration(seconds: 1), () {
+      Navigator.of(context).push(_dillvose());
     });
   }
 
@@ -30,4 +26,15 @@ class _LoadingState extends State<Loading> {
       backgroundColor: primaryColor,
     );
   }
+}
+
+Route _dillvose() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, seconds) => page(),
+      transitionsBuilder: (context, animation, seconds, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      });
 }

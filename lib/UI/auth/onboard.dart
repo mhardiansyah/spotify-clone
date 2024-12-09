@@ -16,7 +16,7 @@ class _onboardState extends State<onboard> {
     return Scaffold(
       backgroundColor: primaryColor,
       body: Padding(
-        padding:const EdgeInsets.only(right: 17, left: 17, top: 70),
+        padding: const EdgeInsets.only(right: 17, left: 17, top: 70),
         child: Center(
           child: Column(
             children: [
@@ -33,11 +33,11 @@ class _onboardState extends State<onboard> {
                 textAlign: TextAlign.center,
                 style: judullogin,
               ),
-             const SizedBox(
+              const SizedBox(
                 height: 45,
               ),
               Container(
-                margin:const EdgeInsets.only(bottom: 20),
+                margin: const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
@@ -46,12 +46,7 @@ class _onboardState extends State<onboard> {
                 ),
                 child: TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Register(),
-                      ),
-                    );
+                    Navigator.of(context).push(_dillvose());
                   },
                   child: Center(
                     child: Text(
@@ -62,19 +57,19 @@ class _onboardState extends State<onboard> {
                 ),
               ),
               Container(
-                margin:const EdgeInsets.only(bottom: 20),
+                margin: const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
                     border: Border.all(color: white)),
                 child: Container(
-                  padding:const EdgeInsets.only(left: 14, top: 16, bottom: 17),
+                  padding: const EdgeInsets.only(left: 14, top: 16, bottom: 17),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset('assets/google.png'),
-                     const SizedBox(
+                      const SizedBox(
                         width: 33,
                       ),
                       Text(
@@ -86,19 +81,19 @@ class _onboardState extends State<onboard> {
                 ),
               ),
               Container(
-                margin:const EdgeInsets.only(bottom: 20),
+                margin: const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(35),
                     border: Border.all(color: white)),
                 child: Container(
-                  padding:const EdgeInsets.only(left: 14, top: 16, bottom: 17),
+                  padding: const EdgeInsets.only(left: 14, top: 16, bottom: 17),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset('assets/fb.png'),
-                     const SizedBox(
+                      const SizedBox(
                         width: 33,
                       ),
                       Text(
@@ -110,7 +105,7 @@ class _onboardState extends State<onboard> {
                 ),
               ),
               Container(
-                margin:const EdgeInsets.only(bottom: 20),
+                margin: const EdgeInsets.only(bottom: 20),
                 width: 380,
                 height: 68,
                 decoration: BoxDecoration(
@@ -122,7 +117,7 @@ class _onboardState extends State<onboard> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Image.asset('assets/x.png'),
-                     const SizedBox(
+                      const SizedBox(
                         width: 54,
                       ),
                       Text(
@@ -139,4 +134,15 @@ class _onboardState extends State<onboard> {
       ),
     );
   }
+}
+
+Route _dillvose() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, seconds) => Register(),
+      transitionsBuilder: (context, animation, seconds, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      });
 }

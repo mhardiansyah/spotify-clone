@@ -1,8 +1,9 @@
 // ignore_for_file: file_names, override_on_non_overriding_member, annotate_overrides, non_constant_identifier_names, prefer_const_constructors, avoid_unnecessary_containers
 
+import 'dart:convert';
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:spotify/Model/Model_search.dart';
 import 'package:spotify/Themes/colors.dart';
 
@@ -14,51 +15,63 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  List<modelsearch> productlagu = [
-    modelsearch(
-      image: 'assets/image/libary1.png',
-      namalagu: 'Liked Songs',
-      desc: 'Playlist . 266 songs',
-    ),
-    modelsearch(
-      image: 'assets/image/libary2.png',
-      namalagu: 'Emotional Songs',
-      desc: 'Playlist . 266 songs',
-    ),
-    modelsearch(
-      image: 'assets/image/libary3.png',
-      namalagu: 'Augustten Ft Jhesy 😇',
-      desc: 'Playlist . 266 songs',
-    ),
-    modelsearch(
-      image: 'assets/image/libary4.png',
-      namalagu: 'All the Little Lights (Deluxe Version)',
-      desc: 'Playlist . 266 songs',
-    ),
-    modelsearch(
-      image: 'assets/image/libary5.png',
-      namalagu: 'A Place We Knew',
-      desc: 'Playlist . 266 songs',
-    ),
-    modelsearch(
-      image: 'assets/image/libary6.png',
-      namalagu: 'Whispers',
-      desc: 'Playlist . 266 songs',
-    ),
-    modelsearch(
-      image: 'assets/image/libary7.png',
-      namalagu: 'Night Visions',
-      desc: 'Playlist . 266 songs',
-    ),
-  ];
-
+  // List<modelsearch> productlagu = [
+  //   modelsearch(
+  //     image: 'assets/image/libary1.png',
+  //     namalagu: 'Liked Songs',
+  //     desc: 'Playlist . 266 songs',
+  //   ),
+  //   modelsearch(
+  //     image: 'assets/image/libary2.png',
+  //     namalagu: 'Emotional Songs',
+  //     desc: 'Playlist . 266 songs',
+  //   ),
+  //   modelsearch(
+  //     image: 'assets/image/libary3.png',
+  //     namalagu: 'Augustten Ft Jhesy 😇',
+  //     desc: 'Playlist . 266 songs',
+  //   ),
+  //   modelsearch(
+  //     image: 'assets/image/libary4.png',
+  //     namalagu: 'All the Little Lights (Deluxe Version)',
+  //     desc: 'Playlist . 266 songs',
+  //   ),
+  //   modelsearch(
+  //     image: 'assets/image/libary5.png',
+  //     namalagu: 'A Place We Knew',
+  //     desc: 'Playlist . 266 songs',
+  //   ),
+  //   modelsearch(
+  //     image: 'assets/image/libary6.png',
+  //     namalagu: 'Whispers',
+  //     desc: 'Playlist . 266 songs',
+  //   ),
+  //   modelsearch(
+  //     image: 'assets/image/libary7.png',
+  //     namalagu: 'Night Visions',
+  //     desc: 'Playlist . 266 songs',
+  //   ),
+  // ];
+  List<modelsearch> productlagu = [];
   List<modelsearch> displaymodels = [];
   String searchText = '';
 
   @override
   void initState() {
     super.initState();
-    displaymodels = productlagu;
+    loadProducts();
+    // displaymodels = productlagu;
+  }
+
+  Future<void> loadProducts() async {
+    final String response =
+        await rootBundle.loadString('assets/product_lagu.json');
+    final List<dynamic> data = jsonDecode(response);
+
+    setState(() {
+      productlagu = data.map((item) => modelsearch.fromJson(item)).toList();
+      displaymodels = productlagu;
+    });
   }
 
   void upadateList(String value) {
@@ -82,12 +95,12 @@ class _SearchState extends State<Search> {
       child: Container(
         height: 180,
         color: primaryColor,
-        padding:const EdgeInsets.only(left: 17, right: 17, top: 70),
+        padding: const EdgeInsets.only(left: 17, right: 17, top: 70),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Search', style: judul),
-           const SizedBox(height: 23),
+            const SizedBox(height: 23),
             TextField(
               onChanged: (value) => upadateList(value),
               decoration: InputDecoration(
@@ -114,7 +127,7 @@ class _SearchState extends State<Search> {
             Text('Your top genres', style: mainJudul),
             SizedBox(height: 11),
             Container(
-              margin:const EdgeInsets.only(bottom: 26),
+              margin: const EdgeInsets.only(bottom: 26),
               child: GridView.count(
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,
@@ -131,9 +144,9 @@ class _SearchState extends State<Search> {
               ),
             ),
             Text('Browse all', style: mainJudul),
-           const SizedBox(height: 11),
+            const SizedBox(height: 11),
             Container(
-              margin:const EdgeInsets.only(bottom: 26),
+              margin: const EdgeInsets.only(bottom: 26),
               child: GridView.count(
                 crossAxisCount: 2,
                 crossAxisSpacing: 16,

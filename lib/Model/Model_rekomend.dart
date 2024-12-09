@@ -11,9 +11,9 @@ class ModelRekomend extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   
     return Container(
       width: 189,
-      height: 70,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: rekomend,
@@ -28,8 +28,8 @@ class ModelRekomend extends StatelessWidget {
                 height: 60,
                 width: 60,
               ),
-             const SizedBox(
-                width: 4,
+              const SizedBox(
+                width: 5,
               ),
               Text(
                 namaRekomend,

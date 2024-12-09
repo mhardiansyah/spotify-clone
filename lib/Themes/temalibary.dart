@@ -14,6 +14,7 @@ TextStyle sub_Library2 =
 
 TextStyle judul_lagu = GoogleFonts.poppins(
     fontSize: 14, fontWeight: FontWeight.w500, color: second);
+    
 TextStyle judul_lagu2 = GoogleFonts.poppins(
     fontSize: 14, fontWeight: FontWeight.w500, color: white);
 

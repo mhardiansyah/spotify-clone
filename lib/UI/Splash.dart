@@ -21,11 +21,7 @@ class _SplashState extends State<Splash> {
     super.initState();
 
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => onboard(),
-          ));
+      Navigator.of(context).push(_dillvose());
     });
   }
 
@@ -41,4 +37,15 @@ class _SplashState extends State<Splash> {
       ),
     );
   }
+}
+
+Route _dillvose() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, seconds) => onboard(),
+      transitionsBuilder: (context, animation, seconds, child) {
+        return FadeTransition(
+          opacity: animation,
+          child: child,
+        );
+      });
 }

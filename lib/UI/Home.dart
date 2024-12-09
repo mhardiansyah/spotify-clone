@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:spotify/Model/Model_home.dart';
 import 'package:spotify/Model/Model_rekomend.dart';
+import 'package:spotify/Model/model_home2.dart';
 import 'package:spotify/Themes/colors.dart';
 
 class Home extends StatefulWidget {
@@ -146,9 +147,10 @@ class _HomeState extends State<Home> {
                     GestureDetector(
                       onTap: () {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content:
-                                  Text('Lagu berhasil ditambahkan ke favorit')),
+                          SnackBar(
+                              content: Text(isFavorite
+                                  ? 'lagu Dihapus dari favorit'
+                                  : 'lagu berhasi di tambah  ke favorit')),
                         );
                         setState(() {
                           isFavorite = !isFavorite;
@@ -185,35 +187,60 @@ class _HomeState extends State<Home> {
           child: Row(
             children: [
               ModelHome(
-                  imagehome: 'assets/image/laguhome4.png',
-                  name:
-                      'Your weekly mixtape of fresh\nmusic. Enjoy new music and d...',
-                  desc: ''),
+                imagehome: 'assets/image/laguhome4.png',
+                name:
+                    'Your weekly mixtape of fresh\nmusic. Enjoy new music and d...',
+                desc: '',
+                audioPath: '',
+              ),
               const SizedBox(width: 17),
               ModelHome(
                   imagehome: 'assets/image/laguhome1.png',
                   name: 'rumah ke rumah',
-                  desc: 'Single Hindia'),
+                  desc: 'Single Hindia',
+                  audioPath: 'assets/audio/rumah.mp3'),
               const SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/image/laguhome2.png',
-                  name: 'Numb Little Bug',
-                  desc: 'Single Em Beihold'),
+                  imagehome: 'assets/image/screenlagu1.png',
+                  name: 'We Dont Talk Anymore',
+                  desc: 'Single  charlie puth',
+                  audioPath: 'assets/audio/test.mp3'),
               const SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/image/laguhome3.png',
-                  name: 'Evering Road (Deluxe)',
-                  desc: 'Album Tom Grennan'),
+                  imagehome: 'assets/image/screenlagu2.png',
+                  name: 'Ghost',
+                  desc: 'Single  BoyswithUke',
+                  audioPath: 'assets/audio/ghost.mp3'),
               const SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/image/laguhome2.png',
-                  name: 'Numb Little Bug',
-                  desc: 'Single Em Beihold'),
+                  imagehome: 'assets/image/screenlagu3.png',
+                  name: 'Mockingbird',
+                  desc: 'Single  Eminem',
+                  audioPath: 'assets/audio/Eminem.mp3'),
               const SizedBox(width: 17),
               ModelHome(
-                  imagehome: 'assets/image/laguhome3.png',
-                  name: 'Nabi palsu',
-                  desc: 'Single   Hindia'),
+                  imagehome: 'assets/image/screenlagu4.png',
+                  name: 'Love story',
+                  desc: 'Single Taylor swift',
+                  audioPath: 'assets/audio/Taylor Swift.mp3'),
+              const SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/screenlagu5.png',
+                  name: 'Stand by Me',
+                  desc: 'Oasis',
+                  audioPath: 'assets/audio/Oasis.mp3'),
+              const SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/screenlagu6.png',
+                  name: 'Peradaban',
+                  desc: 'Feast',
+                  audioPath: 'assets/audio/Feast.mp3'),
+              const SizedBox(width: 17),
+              ModelHome(
+                  imagehome: 'assets/image/screenlagu7.png',
+                  name: 'Rapsodi',
+                  desc: 'JKT48',
+                  audioPath: 'assets/audio/Rapsodi.mp3'),
               const SizedBox(width: 17),
             ],
           ),
@@ -230,28 +257,28 @@ class _HomeState extends State<Home> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/just1.png',
                   name:
                       'Your weekly mixtape of fresh\nmusic. Enjoy new music and d...',
                   desc: ''),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/just2.png',
                   name: 'Numb Little Bug',
                   desc: 'Single   Em Beihold'),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/just3.png',
                   name: 'Evering Road (Deluxe)',
                   desc: 'Album Tom Grennan'),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/just2.png',
                   name: 'Numb Little Bug',
                   desc: 'Single Em Beihold'),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/just3.png',
                   name: 'Nabi palsu',
                   desc: 'Single   Hindia'),
@@ -271,31 +298,31 @@ class _HomeState extends State<Home> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/more1.png',
                   name:
                       'Maverick City Music, Hillsong\nUNITED, Hillsong Worship, Bet...',
                   desc: ''),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/more2.png',
                   name:
                       'Ed Sheeran, Passenger, Justin\nBieber, Dean Lewis, Taylor Swift',
                   desc: ''),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/more3.png',
                   name:
                       'Yo-Yo Ma, Ludovico Einaudi,\nAlexis Ffrench, Daniel Hope, Yi...',
                   desc: ''),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/more2.png',
                   name:
                       'Ed Sheeran, Passenger, Justin\nBieber, Dean Lewis, Taylor Swift',
                   desc: ''),
               SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/more3.png',
                   name:
                       'Yo-Yo Ma, Ludovico Einaudi,\nAlexis Ffrench, Daniel Hope, Yi...',
@@ -316,27 +343,27 @@ class _HomeState extends State<Home> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/mix1.png',
                   name: 'Dean Lewis, Lord Huron, Sia and\nmore',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/mix2.png',
                   name: 'Ed Sheeran, Marshmellow, Tall\nHeights and more',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/mix3.png',
                   name: 'Imagine Dragons, Rihanna,\nJustin Bieber and more',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/mix2.png',
                   name: 'Ed Sheeran, Marshmellow, Tall\nHeights and more',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/mix3.png',
                   name: 'Imagine Dragons, Rihanna,\nJustin Bieber and more',
                   desc: ''),
@@ -382,29 +409,29 @@ class _HomeState extends State<Home> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/1.png',
                   name:
                       'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/2.png',
                   name: 'Harry Styles, Ed Sheeran,\nPassenger, Dean Lewis',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/2.png',
                   name:
                       'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/1.png',
                   name: 'Harry Styles, Ed Sheeran,\nPassenger, Dean Lewis',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/2.png',
                   name:
                       'Ed Sheeran, Passenger, Drake,\nDean Lewis, Taylor Swift',
@@ -425,29 +452,29 @@ class _HomeState extends State<Home> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/Uniquely1.png',
                   name: 'Songs you love right now',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/Uniquely2.png',
                   name:
                       'We made you a personalized\nplaylist with songs to take you ...',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/Uniquely1.png',
                   name: 'Your past favorites',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/Uniquely2.png',
                   name:
                       'We made you a personalized\nplaylist with songs to take you ...',
                   desc: ''),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/Uniquely1.png',
                   name: 'Your past favorites',
                   desc: ''),
@@ -467,27 +494,27 @@ class _HomeState extends State<Home> {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/back1.png',
                   name: 'Hurry up, We’re Dreaming',
                   desc: 'Album . M83'),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/back2.png',
                   name: 'Chapters',
                   desc: 'Album . James TW'),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/back3.png',
                   name: 'Jess',
                   desc: 'Playlist . Jhesy'),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/back2.png',
                   name: 'Chapters',
                   desc: 'Album . James TW'),
               const SizedBox(width: 17),
-              ModelHome(
+              ModelHome2(
                   imagehome: 'assets/image/back3.png',
                   name: 'Jess',
                   desc: 'Playlist . Jhesy'),
